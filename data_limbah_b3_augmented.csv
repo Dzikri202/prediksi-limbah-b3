@@ -1,0 +1,1002 @@
+Tanggal,Jenis_Limbah_B3,Sumber,Volume_Masuk_Ton,Sisa_di_TPS_Ton,Bulan,Tahun,Kuartal,Hari_dalam_Bulan,Sumber_Data
+2024-06-20,Aki Bekas,Genset No. 4,0.0207,0.0211,6,2024,2,20,Augmentasi
+2024-06-24,Aki Bekas,Genset No. 4,0.018,0.0185,6,2024,2,24,Augmentasi
+2024-07-09,Aki Bekas,Genset No. 4,0.02,0.0213,7,2024,3,9,Augmentasi
+2024-07-20,Aki Bekas,Genset No. 4,0.02,0.02,7,2024,3,20,Asli
+2024-07-23,Aki Bekas,Genset No. 4,0.0228,0.0192,7,2024,3,23,Augmentasi
+2024-07-25,Aki Bekas,Genset No. 4,0.0204,0.0213,7,2024,3,25,Augmentasi
+2023-01-27,Filter Bekas,Genset,0.01,0.01,1,2023,1,27,Asli
+2023-01-27,Filter Bekas,Genset,0.0112,0.01,1,2023,1,27,Augmentasi
+2023-01-27,Filter Bekas,Genset,0.01,0.0096,1,2023,1,27,Augmentasi
+2023-02-04,Filter Bekas,Genset,0.0098,0.0095,2,2023,1,4,Augmentasi
+2023-02-12,Filter Bekas,Genset,0.0102,0.0095,2,2023,1,12,Augmentasi
+2023-02-15,Filter Bekas,Genset,0.0134,0.0199,2,2023,1,15,Augmentasi
+2023-02-16,Filter Bekas,Genset,0.012,0.0216,2,2023,1,16,Augmentasi
+2023-02-17,Filter Bekas,Genset,0.012,0.022,2,2023,1,17,Asli
+2023-02-17,Filter Bekas,Genset,0.0102,0.0107,2,2023,1,17,Augmentasi
+2023-02-21,Filter Bekas,Genset,0.0108,0.0199,2,2023,1,21,Augmentasi
+2023-03-02,Filter Bekas,Genset,0.0126,0.0226,3,2023,1,2,Augmentasi
+2023-03-03,Filter Bekas,Genset,0.0112,0.0198,3,2023,1,3,Augmentasi
+2023-03-07,Filter Bekas,Genset,0.0107,0.0219,3,2023,1,7,Augmentasi
+2023-03-08,Filter Bekas,Genset,0.011,0.0227,3,2023,1,8,Augmentasi
+2023-03-20,Filter Bekas,Gens & Loader,0.0089,0.0295,3,2023,1,20,Augmentasi
+2023-03-24,Filter Bekas,Gens & Loader,0.01,0.032,3,2023,1,24,Asli
+2023-03-28,Filter Bekas,Gens & Loader,0.0114,0.0334,3,2023,1,28,Augmentasi
+2023-03-30,Filter Bekas,Genset,0.002,0.0325,3,2023,1,30,Augmentasi
+2023-04-08,Filter Bekas,Genset,0.0018,0.0352,4,2023,2,8,Augmentasi
+2023-04-12,Filter Bekas,Genset,0.0017,0.0328,4,2023,2,12,Augmentasi
+2023-04-16,Filter Bekas,Genset,0.002,0.034,4,2023,2,16,Asli
+2023-04-19,Filter Bekas,Genset,0.0018,0.0349,4,2023,2,19,Augmentasi
+2023-04-22,Filter Bekas,Genset & Loader,0.0063,0.0413,4,2023,2,22,Augmentasi
+2023-04-24,Filter Bekas,Genset,0.0023,0.0322,4,2023,2,24,Augmentasi
+2023-04-26,Filter Bekas,Genset & Loader,0.0052,0.0406,4,2023,2,26,Augmentasi
+2023-04-30,Filter Bekas,Genset,0.0018,0.0346,4,2023,2,30,Augmentasi
+2023-05-03,Filter Bekas,Genset & Loader,0.0056,0.0382,5,2023,2,3,Augmentasi
+2023-05-08,Filter Bekas,Genset,0.0021,0.0352,5,2023,2,8,Augmentasi
+2023-05-13,Filter Bekas,Genset & Loader,0.0057,0.0437,5,2023,2,13,Augmentasi
+2023-05-21,Filter Bekas,Genset & Loader,0.006,0.04,5,2023,2,21,Asli
+2023-05-26,Filter Bekas,Genset & Loader,0.0068,0.0404,5,2023,2,26,Augmentasi
+2023-05-26,Filter Bekas,Genset & Loader,0.0067,0.04,5,2023,2,26,Augmentasi
+2023-06-02,Filter Bekas,Genset,0.011,0.0552,6,2023,2,2,Augmentasi
+2023-06-15,Filter Bekas,Genset & Loader,0.0056,0.0436,6,2023,2,15,Augmentasi
+2023-06-19,Filter Bekas,Loader SDLG,0.0063,0.0567,6,2023,2,19,Augmentasi
+2023-06-26,Filter Bekas,Genset,0.012,0.052,6,2023,2,26,Asli
+2023-06-26,Filter Bekas,Genset,0.0119,0.0483,6,2023,2,26,Augmentasi
+2023-07-09,Filter Bekas,Loader SDLG,0.0053,0.0544,7,2023,3,9,Augmentasi
+2023-07-11,Filter Bekas,Genset No. 3,0.0042,0.0602,7,2023,3,11,Augmentasi
+2023-07-15,Filter Bekas,Loader SDLG,0.0019,0.0672,7,2023,3,15,Augmentasi
+2023-07-16,Filter Bekas,Loader SDLG,0.006,0.058,7,2023,3,16,Asli
+2023-07-17,Filter Bekas,Genset No. 3,0.004,0.062,7,2023,3,17,Asli
+2023-07-17,Filter Bekas,Loader SDLG,0.0053,0.0533,7,2023,3,17,Augmentasi
+2023-07-18,Filter Bekas,Loader SDLG,0.0021,0.0587,7,2023,3,18,Augmentasi
+2023-07-20,Filter Bekas,Genset No. 3,0.0044,0.056,7,2023,3,20,Augmentasi
+2023-07-21,Filter Bekas,Genset CAT No.2,0.0037,0.0759,7,2023,3,21,Augmentasi
+2023-07-22,Filter Bekas,Loader SDLG,0.0062,0.0632,7,2023,3,22,Augmentasi
+2023-07-31,Filter Bekas,Genset No. 4,0.0091,0.0755,7,2023,3,31,Augmentasi
+2023-08-01,Filter Bekas,Genset CAT No.2,0.0035,0.0745,8,2023,3,1,Augmentasi
+2023-08-05,Filter Bekas,Genset CAT No.2,0.0044,0.0781,8,2023,3,5,Augmentasi
+2023-08-05,Filter Bekas,Genset No. 4,0.0082,0.0698,8,2023,3,5,Augmentasi
+2023-08-07,Filter Bekas,Cold Diesel BM 9939 AI,0.0023,0.0824,8,2023,3,7,Augmentasi
+2023-08-08,Filter Bekas,Loader SDLG,0.002,0.064,8,2023,3,8,Asli
+2023-08-09,Filter Bekas,Genset No. 3,0.0038,0.0627,8,2023,3,9,Augmentasi
+2023-08-11,Filter Bekas,Genset No. 4,0.008,0.072,8,2023,3,11,Asli
+2023-08-11,Filter Bekas,Loader SDLG,0.0066,0.0587,8,2023,3,11,Augmentasi
+2023-08-11,Filter Bekas,Cold Diesel BM 9939 AI,0.0018,0.073,8,2023,3,11,Augmentasi
+2023-08-18,Filter Bekas,Genset CAT No.2,0.004,0.076,8,2023,3,18,Asli
+2023-08-18,Filter Bekas,Genset CAT No.2,0.0039,0.0738,8,2023,3,18,Augmentasi
+2023-08-19,Filter Bekas,Cold Diesel BM 9939 AI,0.002,0.0767,8,2023,3,19,Augmentasi
+2023-08-20,Filter Bekas,Genset No. 4,0.0072,0.0728,8,2023,3,20,Augmentasi
+2023-08-21,Filter Bekas,Cold Diesel BM 9939 AI,0.0017,0.0818,8,2023,3,21,Augmentasi
+2023-08-22,Filter Bekas,Loader SDLG,0.0021,0.0609,8,2023,3,22,Augmentasi
+2023-08-23,Filter Bekas,Cold Diesel BM 9939 AI,0.0021,0.0813,8,2023,3,23,Augmentasi
+2023-08-23,Filter Bekas,Cold Diesel BM 9939 AI,0.0023,0.0803,8,2023,3,23,Augmentasi
+2023-08-23,Filter Bekas,Loader SDLG,0.0065,0.0759,8,2023,3,23,Augmentasi
+2023-08-25,Filter Bekas,Genset No. 4,0.0078,0.071,8,2023,3,25,Augmentasi
+2023-08-27,Filter Bekas,Loader SDLG,0.0018,0.0684,8,2023,3,27,Augmentasi
+2023-08-28,Filter Bekas,Cold Diesel BM 9939 AI,0.002,0.078,8,2023,3,28,Asli
+2023-08-28,Filter Bekas,Genset No. 4,0.0087,0.0754,8,2023,3,28,Augmentasi
+2023-08-30,Filter Bekas,Loader SDLG,0.006,0.0813,8,2023,3,30,Augmentasi
+2023-09-03,Filter Bekas,Loader SDLG,0.006,0.084,9,2023,3,3,Asli
+2023-09-03,Filter Bekas,Genset CAT No.1,0.0038,0.0851,9,2023,3,3,Augmentasi
+2023-09-03,Filter Bekas,Genset No. 4,0.007,0.0741,9,2023,3,3,Augmentasi
+2023-09-04,Filter Bekas,Loader SDLG,0.0022,0.0854,9,2023,3,4,Augmentasi
+2023-09-05,Filter Bekas,Genset CAT No.1,0.0036,0.0893,9,2023,3,5,Augmentasi
+2023-09-05,Filter Bekas,Genset No. 4,0.0088,0.0789,9,2023,3,5,Augmentasi
+2023-09-07,Filter Bekas,Genset No. 4,0.008,0.0668,9,2023,3,7,Augmentasi
+2023-09-07,Filter Bekas,Loader SDLG,0.002,0.0854,9,2023,3,7,Augmentasi
+2023-09-08,Filter Bekas,Loader SDLG,0.0021,0.0904,9,2023,3,8,Augmentasi
+2023-09-10,Filter Bekas,Genset No. 4,0.007,0.0717,9,2023,3,10,Augmentasi
+2023-09-11,Filter Bekas,Loader SDLG,0.002,0.0938,9,2023,3,11,Augmentasi
+2023-09-11,Filter Bekas,Genset CAT No.2,0.0046,0.07,9,2023,3,11,Augmentasi
+2023-09-13,Filter Bekas,Cold Diesel BM 9939 AI,0.0022,0.0714,9,2023,3,13,Augmentasi
+2023-09-14,Filter Bekas,Genset CAT No.2,0.0043,0.0748,9,2023,3,14,Augmentasi
+2023-09-15,Filter Bekas,Cold Diesel BM 9939 AI,0.0021,0.0823,9,2023,3,15,Augmentasi
+2023-09-15,Filter Bekas,Genset CAT No.1,0.0035,0.0936,9,2023,3,15,Augmentasi
+2023-09-17,Filter Bekas,Loader SDLG,0.0062,0.0784,9,2023,3,17,Augmentasi
+2023-09-22,Filter Bekas,Cold Diesel BM 9939 AI,0.0022,0.0712,9,2023,3,22,Augmentasi
+2023-09-24,Filter Bekas,Loader SDLG,0.002,0.0971,9,2023,3,24,Augmentasi
+2023-09-25,Filter Bekas,Genset CAT No.1,0.004,0.088,9,2023,3,25,Asli
+2023-09-25,Filter Bekas,Loader SDLG,0.006,0.0898,9,2023,3,25,Augmentasi
+2023-09-26,Filter Bekas,Cold Diesel BM 9939 AI,0.0022,0.0779,9,2023,3,26,Augmentasi
+2023-09-27,Filter Bekas,Genset CAT No.1,0.0036,0.0953,9,2023,3,27,Augmentasi
+2023-09-30,Filter Bekas,Genset CAT No.1,0.0037,0.095,9,2023,3,30,Augmentasi
+2023-10-01,Filter Bekas,Loader SDLG,0.002,0.09,10,2023,4,1,Asli
+2023-10-12,Filter Bekas,Loader SDLG,0.0022,0.1005,10,2023,4,12,Augmentasi
+2023-10-12,Filter Bekas,Genset No. 4,0.0036,0.0891,10,2023,4,12,Augmentasi
+2023-10-17,Filter Bekas,Genset No. 4,0.0039,0.0967,10,2023,4,17,Augmentasi
+2023-10-18,Filter Bekas,Genset CAT No.1,0.0038,0.0923,10,2023,4,18,Augmentasi
+2023-10-19,Filter Bekas,Genset No. 4,0.0034,0.0945,10,2023,4,19,Augmentasi
+2023-10-20,Filter Bekas,Genset No. 4,0.004,0.094,10,2023,4,20,Asli
+2023-10-23,Filter Bekas,Genset CAT No.1,0.0042,0.0892,10,2023,4,23,Augmentasi
+2023-10-23,Filter Bekas,Genset No. 4,0.0041,0.0871,10,2023,4,23,Augmentasi
+2023-10-24,Filter Bekas,Loader SDLG,0.0019,0.0816,10,2023,4,24,Augmentasi
+2023-10-25,Filter Bekas,Genset CAT No.2,0.0042,0.0916,10,2023,4,25,Augmentasi
+2023-10-25,Filter Bekas,Loader SDLG,0.0022,0.1024,10,2023,4,25,Augmentasi
+2023-10-29,Filter Bekas,Loader SDLG,0.002,0.096,10,2023,4,29,Asli
+2023-11-02,Filter Bekas,Loader SDLG,0.002,0.0959,11,2023,4,2,Augmentasi
+2023-11-04,Filter Bekas,Loader SDLG,0.0021,0.1054,11,2023,4,4,Augmentasi
+2023-11-08,Filter Bekas,Genset CAT No.2,0.0046,0.0997,11,2023,4,8,Augmentasi
+2023-11-13,Filter Bekas,Genset CAT No.2,0.0043,0.1087,11,2023,4,13,Augmentasi
+2023-11-14,Filter Bekas,Genset CAT No.2,0.0037,0.1097,11,2023,4,14,Augmentasi
+2023-11-22,Filter Bekas,Genset CAT No.2,0.004,0.1,11,2023,4,22,Asli
+2023-11-23,Filter Bekas,Genset CAT No.2,0.0041,0.1054,11,2023,4,23,Augmentasi
+2023-11-26,Filter Bekas,Genset CAT No.1,0.0042,0.0994,11,2023,4,26,Augmentasi
+2023-12-05,Filter Bekas,Genset CAT No.1,0.0038,0.0976,12,2023,4,5,Augmentasi
+2023-12-06,Filter Bekas,Loader SDLG,0.0057,0.1037,12,2023,4,6,Augmentasi
+2023-12-08,Filter Bekas,Genset No. 4,0.0053,0.1274,12,2023,4,8,Augmentasi
+2023-12-08,Filter Bekas,Genset CAT No.2,0.0036,0.1026,12,2023,4,8,Augmentasi
+2023-12-19,Filter Bekas,Genset CAT No.1,0.0042,0.1032,12,2023,4,19,Augmentasi
+2023-12-19,Filter Bekas,Genset No. 4,0.0061,0.1215,12,2023,4,19,Augmentasi
+2023-12-19,Filter Bekas,Genset No. 4,0.0065,0.1178,12,2023,4,19,Augmentasi
+2023-12-20,Filter Bekas,Genset CAT No.1,0.0034,0.108,12,2023,4,20,Augmentasi
+2023-12-21,Filter Bekas,Genset CAT No.1,0.004,0.104,12,2023,4,21,Asli
+2023-12-24,Filter Bekas,Loader SDLG,0.006,0.11,12,2023,4,24,Asli
+2023-12-28,Filter Bekas,Genset No. 4,0.006,0.116,12,2023,4,28,Asli
+2024-01-02,Filter Bekas,Loader SDLG,0.0023,0.002,1,2024,1,2,Augmentasi
+2024-01-02,Filter Bekas,Loader SDLG,1.9235,1.9826,1,2024,1,2,Augmentasi
+2024-01-06,Filter Bekas,Genset No. 4,0.0068,0.1232,1,2024,1,6,Augmentasi
+2024-01-07,Filter Bekas,Genset No. 4,0.0055,0.1079,1,2024,1,7,Augmentasi
+2024-01-09,Filter Bekas,Loader SDLG,2.0848,2.0037,1,2024,1,9,Augmentasi
+2024-01-12,Filter Bekas,Genset CAT No.1,0.0037,0.1006,1,2024,1,12,Augmentasi
+2024-01-21,Filter Bekas,Loader SDLG,0.0065,0.1096,1,2024,1,21,Augmentasi
+2024-01-25,Filter Bekas,Genset No. 4,6.1329,7.7875,1,2024,1,25,Augmentasi
+2024-01-27,Filter Bekas,Loader SDLG,2.0,2.0,1,2024,1,27,Asli
+2024-01-27,Filter Bekas,Loader SDLG,0.002,0.002,1,2024,1,27,Asli
+2024-01-29,Filter Bekas,Genset No. 4,6.025,7.4344,1,2024,1,29,Augmentasi
+2024-02-10,Filter Bekas,Loader SDLG,0.0017,0.0018,2,2024,1,10,Augmentasi
+2024-02-12,Filter Bekas,Loader SDLG,0.0021,0.0019,2,2024,1,12,Augmentasi
+2024-02-16,Filter Bekas,Loader SDLG,5.3553,14.9687,2,2024,1,16,Augmentasi
+2024-02-17,Filter Bekas,Genset No. 4,0.0053,0.0087,2,2024,1,17,Augmentasi
+2024-02-23,Filter Bekas,Loader SDLG,1.7553,2.1853,2,2024,1,23,Augmentasi
+2024-02-24,Filter Bekas,Genset No. 4,6.0,8.0,2,2024,1,24,Asli
+2024-02-24,Filter Bekas,Genset No. 4,0.006,0.008,2,2024,1,24,Asli
+2024-02-24,Filter Bekas,Loader SDLG,0.0069,0.0136,2,2024,1,24,Augmentasi
+2024-02-24,Filter Bekas,Loader SDLG,0.0069,0.0137,2,2024,1,24,Augmentasi
+2024-02-28,Filter Bekas,Loader SDLG,6.5299,13.7928,2,2024,1,28,Augmentasi
+2024-02-29,Filter Bekas,Genset CAT No. 1,0.0039,0.0191,2,2024,1,29,Augmentasi
+2024-03-03,Filter Bekas,Loader SDLG,0.0057,0.0144,3,2024,1,3,Augmentasi
+2024-03-06,Filter Bekas,Genset CAT No. 1,0.0038,0.0166,3,2024,1,6,Augmentasi
+2024-03-06,Filter Bekas,Loader SDLG,5.6109,14.2176,3,2024,1,6,Augmentasi
+2024-03-09,Filter Bekas,Genset No. 4,0.0057,0.0084,3,2024,1,9,Augmentasi
+2024-03-12,Filter Bekas,Genset No. 4,0.006,0.0079,3,2024,1,12,Augmentasi
+2024-03-13,Filter Bekas,Loader SDLG,5.1519,15.0815,3,2024,1,13,Augmentasi
+2024-03-13,Filter Bekas,Loader SDLG,0.0055,0.0128,3,2024,1,13,Augmentasi
+2024-03-14,Filter Bekas,Genset No. 4,6.1853,8.1263,3,2024,1,14,Augmentasi
+2024-03-17,Filter Bekas,Loader SDLG,6.0,14.0,3,2024,1,17,Asli
+2024-03-17,Filter Bekas,Loader SDLG,0.006,0.014,3,2024,1,17,Asli
+2024-03-18,Filter Bekas,Genset CAT No. 1,0.0045,0.0177,3,2024,1,18,Augmentasi
+2024-03-18,Filter Bekas,Genset No. 4,5.3636,7.331,3,2024,1,18,Augmentasi
+2024-03-19,Filter Bekas,Genset No. 4,6.1867,24.9386,3,2024,1,19,Augmentasi
+2024-03-20,Filter Bekas,Genset No. 4,0.0064,0.0074,3,2024,1,20,Augmentasi
+2024-03-20,Filter Bekas,Genset No. 4,5.4384,8.7522,3,2024,1,20,Augmentasi
+2024-03-21,Filter Bekas,Genset No. 4,0.0054,0.0217,3,2024,1,21,Augmentasi
+2024-03-24,Filter Bekas,Genset No. 4,0.0057,0.0256,3,2024,1,24,Augmentasi
+2024-03-24,Filter Bekas,Genset CAT No. 1,0.0042,0.0193,3,2024,1,24,Augmentasi
+2024-03-24,Filter Bekas,Genset No. 4,5.1466,24.8347,3,2024,1,24,Augmentasi
+2024-03-25,Filter Bekas,Genset CAT No. 1,4.0,18.0,3,2024,1,25,Asli
+2024-03-25,Filter Bekas,Genset CAT No. 1,0.004,0.018,3,2024,1,25,Asli
+2024-03-25,Filter Bekas,Genset No. 4,0.0053,0.0242,3,2024,1,25,Augmentasi
+2024-03-25,Filter Bekas,Genset No. 2,0.0035,0.0274,3,2024,1,25,Augmentasi
+2024-03-26,Filter Bekas,Genset No. 2,0.0043,0.0299,3,2024,1,26,Augmentasi
+2024-03-26,Filter Bekas,Genset CAT No. 1,4.5238,16.4205,3,2024,1,26,Augmentasi
+2024-04-02,Filter Bekas,Genset No. 2,3.9035,25.2459,4,2024,2,2,Augmentasi
+2024-04-05,Filter Bekas,Loader SDLG,5.4063,13.6989,4,2024,2,5,Augmentasi
+2024-04-05,Filter Bekas,Genset No. 2,4.4067,27.1567,4,2024,2,5,Augmentasi
+2024-04-05,Filter Bekas,Loader SDLG,0.0067,0.0153,4,2024,2,5,Augmentasi
+2024-04-06,Filter Bekas,Loader SDLG,0.0067,0.0137,4,2024,2,6,Augmentasi
+2024-04-11,Filter Bekas,Loader SDLG,2.2084,29.3193,4,2024,2,11,Augmentasi
+2024-04-11,Filter Bekas,Genset No. 4,5.247,23.275,4,2024,2,11,Augmentasi
+2024-04-13,Filter Bekas,Loader SDLG,5.7406,15.0876,4,2024,2,13,Augmentasi
+2024-04-17,Filter Bekas,Genset No. 4,6.0,24.0,4,2024,2,17,Asli
+2024-04-17,Filter Bekas,Genset No. 4,0.006,0.024,4,2024,2,17,Asli
+2024-04-17,Filter Bekas,Genset No. 2,3.5595,27.2573,4,2024,2,17,Augmentasi
+2024-04-18,Filter Bekas,Genset No. 2,4.0,28.0,4,2024,2,18,Asli
+2024-04-18,Filter Bekas,Genset No. 2,0.004,0.028,4,2024,2,18,Asli
+2024-04-18,Filter Bekas,Genset No. 2,4.579,26.7114,4,2024,2,18,Augmentasi
+2024-04-23,Filter Bekas,Genset No. 4,6.3748,26.2189,4,2024,2,23,Augmentasi
+2024-04-24,Filter Bekas,Loader SDLG,0.002,0.027,4,2024,2,24,Augmentasi
+2024-04-24,Filter Bekas,Genset No. 2,4.35,29.9848,4,2024,2,24,Augmentasi
+2024-04-24,Filter Bekas,Genset CAT No. 1,4.1749,18.637,4,2024,2,24,Augmentasi
+2024-04-28,Filter Bekas,Loader SDLG,2.0,30.0,4,2024,2,28,Asli
+2024-04-28,Filter Bekas,Loader SDLG,0.002,0.03,4,2024,2,28,Asli
+2024-05-01,Filter Bekas,Genset No. 4,0.0056,0.026,5,2024,2,1,Augmentasi
+2024-05-06,Filter Bekas,Genset No. 4,6.4273,22.1466,5,2024,2,6,Augmentasi
+2024-05-08,Filter Bekas,Loader SDLG,0.0021,0.0279,5,2024,2,8,Augmentasi
+2024-05-10,Filter Bekas,Genset No. 2,0.0044,0.0296,5,2024,2,10,Augmentasi
+2024-05-12,Filter Bekas,Genset No. 4,5.6216,22.5201,5,2024,2,12,Augmentasi
+2024-05-14,Filter Bekas,Genset No. 4,6.6191,21.6642,5,2024,2,14,Augmentasi
+2024-05-15,Filter Bekas,Genset No. 2,4.4193,29.2817,5,2024,2,15,Augmentasi
+2024-05-15,Filter Bekas,Loader SDLG,0.0017,0.0315,5,2024,2,15,Augmentasi
+2024-05-22,Filter Bekas,Loader SDLG,0.0019,0.0305,5,2024,2,22,Augmentasi
+2024-05-22,Filter Bekas,Loader SDLG,0.0023,0.0286,5,2024,2,22,Augmentasi
+2024-05-27,Filter Bekas,Loader SDLG,0.0019,0.0281,5,2024,2,27,Augmentasi
+2024-06-01,Filter Bekas,Loader WA180-3,1.785,29.828,6,2024,2,1,Augmentasi
+2024-06-01,Filter Bekas,Loader WA180-3,0.0023,0.0333,6,2024,2,1,Augmentasi
+2024-06-10,Filter Bekas,Genset No. 4,0.0068,0.0396,6,2024,2,10,Augmentasi
+2024-06-13,Filter Bekas,Genset No. 4,0.0056,0.0382,6,2024,2,13,Augmentasi
+2024-06-15,Filter Bekas,Loader WA180-3,0.0019,0.0323,6,2024,2,15,Augmentasi
+2024-06-18,Filter Bekas,Loader WA180-3,2.0,32.0,6,2024,2,18,Asli
+2024-06-18,Filter Bekas,Loader WA180-3,0.002,0.032,6,2024,2,18,Asli
+2024-06-18,Filter Bekas,Loader WA180-3,0.0045,0.0388,6,2024,2,18,Augmentasi
+2024-06-21,Filter Bekas,Genset No. 4,0.0066,0.0365,6,2024,2,21,Augmentasi
+2024-06-21,Filter Bekas,Loader WA180-3,0.0019,0.034,6,2024,2,21,Augmentasi
+2024-06-21,Filter Bekas,Loader WA180-3,0.002,0.0291,6,2024,2,21,Augmentasi
+2024-06-22,Filter Bekas,Loader WA180-3,0.0041,0.0413,6,2024,2,22,Augmentasi
+2024-06-28,Filter Bekas,Genset No. 2,0.0042,0.0419,6,2024,2,28,Augmentasi
+2024-06-28,Filter Bekas,Loader WA180-3,0.0036,0.0403,6,2024,2,28,Augmentasi
+2024-07-03,Filter Bekas,Genset No. 2,0.0046,0.0441,7,2024,3,3,Augmentasi
+2024-07-07,Filter Bekas,Genset No. 1,0.0036,0.0477,7,2024,3,7,Augmentasi
+2024-07-07,Filter Bekas,Loader WA180-3,1.8869,29.0156,7,2024,3,7,Augmentasi
+2024-07-08,Filter Bekas,Genset No. 4,0.006,0.038,7,2024,3,8,Asli
+2024-07-09,Filter Bekas,Loader WA180-3,0.004,0.042,7,2024,3,9,Asli
+2024-07-13,Filter Bekas,Genset No. 2,0.004,0.046,7,2024,3,13,Asli
+2024-07-16,Filter Bekas,Loader WA180-3,2.1816,30.0294,7,2024,3,16,Augmentasi
+2024-07-17,Filter Bekas,Loader WA180-3,0.0037,0.0414,7,2024,3,17,Augmentasi
+2024-07-18,Filter Bekas,Loader WA180-3,0.0043,0.0409,7,2024,3,18,Augmentasi
+2024-07-27,Filter Bekas,Genset No. 4,0.0067,0.039,7,2024,3,27,Augmentasi
+2024-08-01,Filter Bekas,Loader WA180-3,0.0043,0.0391,8,2024,3,1,Augmentasi
+2024-08-01,Filter Bekas,Genset No. 3,0.0037,0.0515,8,2024,3,1,Augmentasi
+2024-08-02,Filter Bekas,Genset No. 2,0.0034,0.0476,8,2024,3,2,Augmentasi
+2024-08-03,Filter Bekas,Genset No. 1,0.004,0.05,8,2024,3,3,Asli
+2024-08-04,Filter Bekas,Loader WA180-3,0.0039,0.0392,8,2024,3,4,Augmentasi
+2024-08-04,Filter Bekas,Genset No. 3,0.0041,0.0517,8,2024,3,4,Augmentasi
+2024-08-04,Filter Bekas,Genset No. 1,0.0042,0.0497,8,2024,3,4,Augmentasi
+2024-08-05,Filter Bekas,Genset No. 3,0.0044,0.0549,8,2024,3,5,Augmentasi
+2024-08-05,Filter Bekas,Genset No. 4,0.0057,0.0406,8,2024,3,5,Augmentasi
+2024-08-06,Filter Bekas,Loader SDLG,0.0021,0.055,8,2024,3,6,Augmentasi
+2024-08-06,Filter Bekas,Genset No. 1,0.0039,0.051,8,2024,3,6,Augmentasi
+2024-08-07,Filter Bekas,Loader SDLG,0.0019,0.0542,8,2024,3,7,Augmentasi
+2024-08-10,Filter Bekas,Loader SDLG,0.0019,0.0562,8,2024,3,10,Augmentasi
+2024-08-20,Filter Bekas,Genset No. 1,0.0034,0.0462,8,2024,3,20,Augmentasi
+2024-08-22,Filter Bekas,Genset No. 3,0.0037,0.053,8,2024,3,22,Augmentasi
+2024-08-23,Filter Bekas,Loader SDLG,0.002,0.052,8,2024,3,23,Asli
+2024-08-23,Filter Bekas,Loader SDLG,0.0022,0.0699,8,2024,3,23,Augmentasi
+2024-08-29,Filter Bekas,Genset No. 3,0.004,0.056,8,2024,3,29,Asli
+2024-09-03,Filter Bekas,Loader SDLG,0.0021,0.0664,9,2024,3,3,Augmentasi
+2024-09-05,Filter Bekas,Genset No. 3,0.0035,0.0597,9,2024,3,5,Augmentasi
+2024-09-15,Filter Bekas,Loader SDLG,0.0017,0.0563,9,2024,3,15,Augmentasi
+2024-09-15,Filter Bekas,Genset No. 1,0.0045,0.0665,9,2024,3,15,Augmentasi
+2024-09-15,Filter Bekas,Genset No. 3,0.0036,0.0606,9,2024,3,15,Augmentasi
+2024-09-17,Filter Bekas,Genset No. 4,0.006,0.062,9,2024,3,17,Asli
+2024-09-18,Filter Bekas,Genset No. 3,0.004,0.06,9,2024,3,18,Augmentasi
+2024-09-18,Filter Bekas,Genset No. 1,0.0037,0.0708,9,2024,3,18,Augmentasi
+2024-09-22,Filter Bekas,Loader SDLG,0.002,0.064,9,2024,3,22,Asli
+2024-09-22,Filter Bekas,Genset No. 1,0.0043,0.0635,9,2024,3,22,Augmentasi
+2024-09-24,Filter Bekas,Genset No. 4,0.0064,0.0668,9,2024,3,24,Augmentasi
+2024-09-25,Filter Bekas,Loader SDLG,0.0017,0.0687,9,2024,3,25,Augmentasi
+2024-09-28,Filter Bekas,Genset No. 3,0.0043,0.0513,9,2024,3,28,Augmentasi
+2024-09-29,Filter Bekas,Genset No. 1,0.0039,0.0716,9,2024,3,29,Augmentasi
+2024-10-01,Filter Bekas,Genset No. 4,0.0067,0.0622,10,2024,4,1,Augmentasi
+2024-10-02,Filter Bekas,Loader SDLG,0.0023,0.0585,10,2024,4,2,Augmentasi
+2024-10-02,Filter Bekas,Genset No. 1,0.0039,0.0714,10,2024,4,2,Augmentasi
+2024-10-10,Filter Bekas,Genset No. 1,0.0042,0.0615,10,2024,4,10,Augmentasi
+2024-10-12,Filter Bekas,Loader SDLG,0.0022,0.0631,10,2024,4,12,Augmentasi
+2024-10-13,Filter Bekas,Loader SDLG,0.0018,0.0683,10,2024,4,13,Augmentasi
+2024-10-14,Filter Bekas,Genset No. 1,0.004,0.068,10,2024,4,14,Asli
+2024-10-14,Filter Bekas,Loader SDLG,0.0018,0.064,10,2024,4,14,Augmentasi
+2024-10-14,Filter Bekas,Genset No. 1,0.004,0.0625,10,2024,4,14,Augmentasi
+2024-10-14,Filter Bekas,Loader SDLG,0.0018,0.068,10,2024,4,14,Augmentasi
+2024-10-15,Filter Bekas,Genset No. 1,0.0041,0.0676,10,2024,4,15,Augmentasi
+2024-10-15,Filter Bekas,Loader SDLG,0.002,0.0609,10,2024,4,15,Augmentasi
+2024-10-25,Filter Bekas,Loader WA180-3,0.0023,0.0718,10,2024,4,25,Augmentasi
+2024-11-01,Filter Bekas,Genset No. 1,0.0046,0.0645,11,2024,4,1,Augmentasi
+2024-11-03,Filter Bekas,Loader WA180-3,0.0019,0.0718,11,2024,4,3,Augmentasi
+2024-11-05,Filter Bekas,Genset No. 1,0.0041,0.0735,11,2024,4,5,Augmentasi
+2024-11-11,Filter Bekas,Loader WA180-3,0.002,0.0718,11,2024,4,11,Augmentasi
+2024-11-17,Filter Bekas,Loader WA180-3,0.002,0.07,11,2024,4,17,Asli
+2024-11-28,Filter Bekas,Genset No. 4,0.0052,0.0798,11,2024,4,28,Augmentasi
+2024-11-30,Filter Bekas,Genset No. 4,0.006,0.076,11,2024,4,30,Asli
+2024-11-30,Filter Bekas,Loader WA180-3,0.0021,0.0794,11,2024,4,30,Augmentasi
+2024-12-03,Filter Bekas,Genset No. 4,0.0053,0.0829,12,2024,4,3,Augmentasi
+2024-12-06,Filter Bekas,Loader WA180-3,0.0022,0.0844,12,2024,4,6,Augmentasi
+2024-12-12,Filter Bekas,Genset No. 4,0.006,0.072,12,2024,4,12,Augmentasi
+2024-12-15,Filter Bekas,Loader WA180-3,0.0018,0.0762,12,2024,4,15,Augmentasi
+2024-12-17,Filter Bekas,Loader WA180-3,0.002,0.0838,12,2024,4,17,Augmentasi
+2024-12-18,Filter Bekas,Loader WA180-3,0.002,0.078,12,2024,4,18,Asli
+2024-12-19,Filter Bekas,Genset No. 1,0.004,0.0842,12,2024,4,19,Augmentasi
+2024-12-21,Filter Bekas,Genset No. 4,0.0062,0.008,12,2024,4,21,Augmentasi
+2024-12-21,Filter Bekas,Genset No. 4,0.0063,0.0085,12,2024,4,21,Augmentasi
+2024-12-24,Filter Bekas,Genset No. 4,0.006,0.0077,12,2024,4,24,Augmentasi
+2024-12-26,Filter Bekas,Genset No. 1,0.004,0.082,12,2024,4,26,Asli
+2024-12-26,Filter Bekas,Genset No. 4,0.0064,0.0732,12,2024,4,26,Augmentasi
+2024-12-26,Filter Bekas,Genset No. 1,0.0035,0.088,12,2024,4,26,Augmentasi
+2024-12-27,Filter Bekas,Genset No. 1,0.0035,0.0795,12,2024,4,27,Augmentasi
+2024-12-28,Filter Bekas,Genset No. 1,0.0041,0.0809,12,2024,4,28,Augmentasi
+2025-01-08,Filter Bekas,Genset No. 1,0.0041,0.0797,1,2025,1,8,Augmentasi
+2025-01-09,Filter Bekas,Loader SDLG,0.002,0.0018,1,2025,1,9,Augmentasi
+2025-01-13,Filter Bekas,Loader SDLG,0.0019,0.002,1,2025,1,13,Augmentasi
+2025-01-16,Filter Bekas,Loader SDLG,0.002,0.002,1,2025,1,16,Asli
+2025-01-16,Filter Bekas,Genset No. 4,0.006,0.008,1,2025,1,16,Asli
+2025-01-16,Filter Bekas,Loader WA180-3,0.0023,0.084,1,2025,1,16,Augmentasi
+2025-01-17,Filter Bekas,Cold Diesel BM 9939 AI,0.002,0.0098,1,2025,1,17,Augmentasi
+2025-01-19,Filter Bekas,Genset No. 4,0.0051,0.0075,1,2025,1,19,Augmentasi
+2025-01-19,Filter Bekas,Loader SDLG,0.0067,0.0165,1,2025,1,19,Augmentasi
+2025-01-20,Filter Bekas,Loader SDLG,0.0019,0.0019,1,2025,1,20,Augmentasi
+2025-01-20,Filter Bekas,Loader SDLG,0.0019,0.0019,1,2025,1,20,Augmentasi
+2025-01-23,Filter Bekas,Loader SDLG,0.0053,0.0157,1,2025,1,23,Augmentasi
+2025-01-23,Filter Bekas,Genset No. 4,0.0055,0.0084,1,2025,1,23,Augmentasi
+2025-01-25,Filter Bekas,Loader SDLG,0.0056,0.0176,1,2025,1,25,Augmentasi
+2025-02-02,Filter Bekas,Loader SDLG,0.0023,0.0022,2,2025,1,2,Augmentasi
+2025-02-02,Filter Bekas,Loader SDLG,0.0017,0.0018,2,2025,1,2,Augmentasi
+2025-02-03,Filter Bekas,Loader SDLG,0.0021,0.0018,2,2025,1,3,Augmentasi
+2025-02-06,Filter Bekas,Cold Diesel BM 9939 AI,0.002,0.01,2,2025,1,6,Asli
+2025-02-06,Filter Bekas,Cold Diesel BM 9939 AI,0.0019,0.0097,2,2025,1,6,Augmentasi
+2025-02-06,Filter Bekas,Loader SDLG,0.0058,0.0161,2,2025,1,6,Augmentasi
+2025-02-08,Filter Bekas,Loader SDLG,0.002,0.0021,2,2025,1,8,Augmentasi
+2025-02-09,Filter Bekas,Loader SDLG,0.0019,0.002,2,2025,1,9,Augmentasi
+2025-02-13,Filter Bekas,Loader SDLG,0.0066,0.0172,2,2025,1,13,Augmentasi
+2025-02-14,Filter Bekas,Genset No. 2,0.0041,0.0228,2,2025,1,14,Augmentasi
+2025-02-14,Filter Bekas,Loader SDLG,0.0018,0.002,2,2025,1,14,Augmentasi
+2025-02-15,Filter Bekas,Genset No. 2,0.0036,0.022,2,2025,1,15,Augmentasi
+2025-02-15,Filter Bekas,Loader SDLG,0.0067,0.0145,2,2025,1,15,Augmentasi
+2025-02-16,Filter Bekas,Loader SDLG,0.006,0.016,2,2025,1,16,Asli
+2025-02-16,Filter Bekas,Cold Diesel BM 9939 AI,0.0023,0.0109,2,2025,1,16,Augmentasi
+2025-02-19,Filter Bekas,Loader SDLG,0.0059,0.0155,2,2025,1,19,Augmentasi
+2025-02-20,Filter Bekas,Loader SDLG,0.0018,0.025,2,2025,1,20,Augmentasi
+2025-02-23,Filter Bekas,Loader SDLG,0.0063,0.0161,2,2025,1,23,Augmentasi
+2025-02-25,Filter Bekas,Genset No. 4,0.0064,0.0334,2,2025,1,25,Augmentasi
+2025-03-01,Filter Bekas,Loader SDLG,0.0052,0.0158,3,2025,1,1,Augmentasi
+2025-03-02,Filter Bekas,Loader SDLG,0.0019,0.0238,3,2025,1,2,Augmentasi
+2025-03-04,Filter Bekas,Genset No. 1,0.004,0.02,3,2025,1,4,Asli
+2025-03-05,Filter Bekas,Genset No. 2,0.004,0.024,3,2025,1,5,Asli
+2025-03-07,Filter Bekas,Genset No. 4,0.0068,0.0349,3,2025,1,7,Augmentasi
+2025-03-10,Filter Bekas,Loader SDLG,0.0019,0.0259,3,2025,1,10,Augmentasi
+2025-03-11,Filter Bekas,Genset No. 1,0.0037,0.0215,3,2025,1,11,Augmentasi
+2025-03-11,Filter Bekas,Loader SDLG,0.0023,0.024,3,2025,1,11,Augmentasi
+2025-03-14,Filter Bekas,Genset No. 2,0.0036,0.0251,3,2025,1,14,Augmentasi
+2025-03-15,Filter Bekas,Loader SDLG,0.002,0.026,3,2025,1,15,Asli
+2025-03-15,Filter Bekas,Genset No. 1,0.0036,0.0187,3,2025,1,15,Augmentasi
+2025-03-18,Filter Bekas,Loader SDLG,0.006,0.015,3,2025,1,18,Augmentasi
+2025-03-22,Filter Bekas,Genset No. 4,0.0052,0.029,3,2025,1,22,Augmentasi
+2025-03-27,Filter Bekas,Genset No. 4,0.006,0.032,3,2025,1,27,Asli
+2025-04-14,Filter Bekas,Genset No. 3,0.004,0.0389,4,2025,2,14,Augmentasi
+2025-04-16,Filter Bekas,Genset No. 3,0.0042,0.039,4,2025,2,16,Augmentasi
+2025-04-21,Filter Bekas,Genset No. 1,0.0042,0.0495,4,2025,2,21,Augmentasi
+2025-04-24,Filter Bekas,Genset No. 3,0.0044,0.0368,4,2025,2,24,Augmentasi
+2025-04-25,Filter Bekas,Genset No. 1,0.0037,0.0501,4,2025,2,25,Augmentasi
+2025-05-02,Filter Bekas,Genset No. 1,0.004,0.0465,5,2025,2,2,Augmentasi
+2025-05-02,Filter Bekas,Loader SDLG,0.0059,0.0548,5,2025,2,2,Augmentasi
+2025-05-04,Filter Bekas,Loader SDLG,0.0061,0.057,5,2025,2,4,Augmentasi
+2025-05-05,Filter Bekas,Genset No. 1,0.0042,0.0438,5,2025,2,5,Augmentasi
+2025-05-06,Filter Bekas,Genset No. 4,0.0066,0.0439,5,2025,2,6,Augmentasi
+2025-05-08,Filter Bekas,Genset No. 3,0.004,0.036,5,2025,2,8,Asli
+2025-05-12,Filter Bekas,Genset No. 1,0.0042,0.0495,5,2025,2,12,Augmentasi
+2025-05-16,Filter Bekas,Genset No. 4,0.006,0.042,5,2025,2,16,Asli
+2025-05-16,Filter Bekas,Genset No. 3,0.0043,0.0354,5,2025,2,16,Augmentasi
+2025-05-20,Filter Bekas,Genset No. 1,0.004,0.046,5,2025,2,20,Asli
+2025-05-22,Filter Bekas,Genset No. 3,0.0043,0.0383,5,2025,2,22,Augmentasi
+2025-05-25,Filter Bekas,Loader SDLG,0.006,0.052,5,2025,2,25,Asli
+2025-05-27,Filter Bekas,Loader SDLG,0.0017,0.0509,5,2025,2,27,Augmentasi
+2025-05-28,Filter Bekas,Loader SDLG,0.0019,0.0535,5,2025,2,28,Augmentasi
+2025-06-02,Filter Bekas,Genset No. 4,0.0068,0.0394,6,2025,2,2,Augmentasi
+2025-06-03,Filter Bekas,Genset No. 3,0.0043,0.0388,6,2025,2,3,Augmentasi
+2025-06-08,Filter Bekas,Genset No. 4,0.0056,0.0381,6,2025,2,8,Augmentasi
+2025-06-10,Filter Bekas,Genset No. 1,0.0044,0.0447,6,2025,2,10,Augmentasi
+2025-06-11,Filter Bekas,Genset No. 4,0.0057,0.0385,6,2025,2,11,Augmentasi
+2025-06-26,Filter Bekas,Loader SDLG,0.002,0.054,6,2025,2,26,Asli
+2025-06-26,Filter Bekas,Loader SDLG,0.002,0.054,6,2025,2,26,Augmentasi
+2025-06-26,Filter Bekas,Loader SDLG,0.002,0.0524,6,2025,2,26,Augmentasi
+2023-06-02,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0781,0.0629,6,2023,2,2,Augmentasi
+2023-06-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0591,0.065,6,2023,2,5,Augmentasi
+2023-06-07,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0663,0.0669,6,2023,2,7,Augmentasi
+2023-06-15,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0695,0.0718,6,2023,2,15,Augmentasi
+2023-06-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0757,0.0687,6,2023,2,17,Augmentasi
+2023-06-20,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0633,0.0626,6,2023,2,20,Augmentasi
+2023-06-27,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.068,0.068,6,2023,2,27,Asli
+2023-06-30,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0722,0.064,6,2023,2,30,Augmentasi
+2023-07-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0764,0.0647,7,2023,3,5,Augmentasi
+2023-07-20,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun & Gudang,0.0741,0.0613,7,2023,3,20,Augmentasi
+2023-08-16,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0062,0.0716,8,2023,3,16,Augmentasi
+2023-08-26,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.006,0.074,8,2023,3,26,Asli
+2023-09-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0056,0.0799,9,2023,3,5,Augmentasi
+2023-09-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0096,0.0794,9,2023,3,13,Augmentasi
+2023-09-18,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0051,0.0762,9,2023,3,18,Augmentasi
+2023-09-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0053,0.0671,9,2023,3,21,Augmentasi
+2023-09-23,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0098,0.078,9,2023,3,23,Augmentasi
+2023-09-25,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0112,0.0804,9,2023,3,25,Augmentasi
+2023-10-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.084,10,2023,4,1,Asli
+2023-10-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0115,0.09,10,2023,4,3,Augmentasi
+2023-10-04,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0112,0.0913,10,2023,4,4,Augmentasi
+2023-10-20,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0099,0.0825,10,2023,4,20,Augmentasi
+2023-10-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0096,0.0862,10,2023,4,21,Augmentasi
+2023-10-24,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.009,0.0903,10,2023,4,24,Augmentasi
+2023-10-24,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0086,0.0866,10,2023,4,24,Augmentasi
+2023-11-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0107,0.0984,11,2023,4,3,Augmentasi
+2023-11-30,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0082,0.106,11,2023,4,30,Augmentasi
+2023-12-02,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.094,12,2023,4,2,Asli
+2023-12-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.009,0.0933,12,2023,4,5,Augmentasi
+2023-12-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0099,0.1001,12,2023,4,5,Augmentasi
+2023-12-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0086,0.0971,12,2023,4,13,Augmentasi
+2023-12-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0094,0.1105,12,2023,4,13,Augmentasi
+2023-12-14,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0093,0.1032,12,2023,4,14,Augmentasi
+2023-12-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.0849,12,2023,4,21,Augmentasi
+2023-12-28,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.009,0.103,12,2023,4,28,Asli
+2023-12-30,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,9.622,10.0643,12,2023,4,30,Augmentasi
+2023-12-31,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0095,0.1095,12,2023,4,31,Augmentasi
+2023-12-31,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0086,0.0094,12,2023,4,31,Augmentasi
+2024-01-24,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0092,0.1,1,2024,1,24,Augmentasi
+2024-01-26,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,10.0,10.0,1,2024,1,26,Asli
+2024-01-26,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.01,1,2024,1,26,Asli
+2024-02-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,9.9319,9.2079,2,2024,1,3,Augmentasi
+2024-02-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0103,0.0099,2,2024,1,5,Augmentasi
+2024-02-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0102,0.0091,2,2024,1,13,Augmentasi
+2024-02-14,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0094,0.0096,2,2024,1,14,Augmentasi
+2024-02-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0102,0.009,2,2024,1,17,Augmentasi
+2024-02-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0096,0.0095,2,2024,1,17,Augmentasi
+2024-04-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0196,0.0271,4,2024,2,1,Augmentasi
+2024-04-10,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,20.5041,28.9643,4,2024,2,10,Augmentasi
+2024-04-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0174,0.0286,4,2024,2,21,Augmentasi
+2024-04-27,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,18.0,28.0,4,2024,2,27,Asli
+2024-04-27,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.018,0.028,4,2024,2,27,Asli
+2024-05-08,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,17.4962,28.9307,5,2024,2,8,Augmentasi
+2024-05-09,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0176,0.0296,5,2024,2,9,Augmentasi
+2024-05-12,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,17.6686,26.8244,5,2024,2,12,Augmentasi
+2024-05-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,18.2041,26.509,5,2024,2,13,Augmentasi
+2024-05-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0187,0.0283,5,2024,2,17,Augmentasi
+2024-06-11,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0001,0.0884,6,2024,2,11,Augmentasi
+2024-06-12,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0158,0.0427,6,2024,2,12,Augmentasi
+2024-06-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0203,0.0501,6,2024,2,13,Augmentasi
+2024-06-14,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0447,0.0944,6,2024,2,14,Augmentasi
+2024-06-14,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0857,6,2024,2,14,Augmentasi
+2024-06-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.02,0.0485,6,2024,2,21,Augmentasi
+2024-06-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0971,6,2024,2,21,Augmentasi
+2024-06-23,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0837,6,2024,2,23,Augmentasi
+2024-06-23,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0186,0.0427,6,2024,2,23,Augmentasi
+2024-06-25,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0844,6,2024,2,25,Augmentasi
+2024-06-26,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0088,0.1133,6,2024,2,26,Augmentasi
+2024-06-29,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0206,0.1145,6,2024,2,29,Augmentasi
+2024-07-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.018,0.046,7,2024,3,1,Asli
+2024-07-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.045,0.091,7,2024,3,1,Asli
+2024-07-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0174,0.0489,7,2024,3,1,Augmentasi
+2024-07-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0175,0.1071,7,2024,3,1,Augmentasi
+2024-07-04,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0001,0.0911,7,2024,3,4,Asli
+2024-07-04,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0913,7,2024,3,4,Asli
+2024-07-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0184,0.1106,7,2024,3,5,Augmentasi
+2024-07-07,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0156,0.1159,7,2024,3,7,Augmentasi
+2024-07-08,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.1193,7,2024,3,8,Asli
+2024-07-08,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0097,0.1098,7,2024,3,8,Augmentasi
+2024-07-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0947,7,2024,3,13,Augmentasi
+2024-07-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0175,0.1185,7,2024,3,17,Augmentasi
+2024-07-19,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0864,7,2024,3,19,Augmentasi
+2024-07-19,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0001,0.082,7,2024,3,19,Augmentasi
+2024-07-20,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.018,0.1093,7,2024,3,20,Asli
+2024-07-24,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0193,0.1162,7,2024,3,24,Augmentasi
+2024-07-24,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0837,7,2024,3,24,Augmentasi
+2024-07-25,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0944,7,2024,3,25,Augmentasi
+2024-07-26,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0001,0.0936,7,2024,3,26,Augmentasi
+2024-07-26,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0436,0.0835,7,2024,3,26,Augmentasi
+2024-07-27,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0878,7,2024,3,27,Augmentasi
+2024-07-28,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0958,7,2024,3,28,Augmentasi
+2024-08-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0002,0.0906,8,2024,3,1,Augmentasi
+2024-08-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Kebun Sei Basau,0.0001,0.0962,8,2024,3,3,Augmentasi
+2024-08-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0088,0.1116,8,2024,3,3,Augmentasi
+2024-08-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0191,0.1026,8,2024,3,5,Augmentasi
+2024-08-09,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Laboratorium,0.0181,0.1138,8,2024,3,9,Augmentasi
+2024-10-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0028,0.1275,10,2024,4,21,Augmentasi
+2024-10-28,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0032,0.1156,10,2024,4,28,Augmentasi
+2024-11-02,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0088,0.1241,11,2024,4,2,Augmentasi
+2024-11-04,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.009,0.1195,11,2024,4,4,Augmentasi
+2024-11-12,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0033,0.112,11,2024,4,12,Augmentasi
+2024-11-15,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.01,0.1235,11,2024,4,15,Augmentasi
+2024-11-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.003,0.1223,11,2024,4,17,Asli
+2024-11-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0097,0.1265,11,2024,4,17,Augmentasi
+2024-11-20,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.01,0.1323,11,2024,4,20,Asli
+2024-11-28,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0026,0.142,11,2024,4,28,Augmentasi
+2024-12-01,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0034,0.1224,12,2024,4,1,Augmentasi
+2024-12-07,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0095,0.0099,12,2024,4,7,Augmentasi
+2024-12-09,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0102,0.0093,12,2024,4,9,Augmentasi
+2024-12-11,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0104,0.0092,12,2024,4,11,Augmentasi
+2024-12-15,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0032,0.1488,12,2024,4,15,Augmentasi
+2024-12-19,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0027,0.1364,12,2024,4,19,Augmentasi
+2024-12-21,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.003,0.1353,12,2024,4,21,Asli
+2024-12-28,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0032,0.1284,12,2024,4,28,Augmentasi
+2025-01-04,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.01,1,2025,1,4,Asli
+2025-01-08,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0034,0.1315,1,2025,1,8,Augmentasi
+2025-01-25,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.006,0.016,1,2025,1,25,Asli
+2025-01-29,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.006,0.0173,1,2025,1,29,Augmentasi
+2025-01-30,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0067,0.0145,1,2025,1,30,Augmentasi
+2025-02-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0059,0.0218,2,2025,1,3,Augmentasi
+2025-02-03,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0088,0.0093,2,2025,1,3,Augmentasi
+2025-02-09,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0058,0.0202,2,2025,1,9,Augmentasi
+2025-02-10,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.006,0.0157,2,2025,1,10,Augmentasi
+2025-02-11,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0058,0.0239,2,2025,1,11,Augmentasi
+2025-02-15,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.006,0.022,2,2025,1,15,Asli
+2025-02-23,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0054,0.0233,2,2025,1,23,Augmentasi
+2025-02-25,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0057,0.0215,2,2025,1,25,Augmentasi
+2025-03-05,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0051,0.021,3,2025,1,5,Augmentasi
+2025-03-15,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0065,0.0234,3,2025,1,15,Augmentasi
+2025-04-12,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.051,0.073,4,2025,2,12,Asli
+2025-04-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0495,0.0751,4,2025,2,13,Augmentasi
+2025-04-17,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.048,0.0781,4,2025,2,17,Augmentasi
+2025-04-27,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0566,0.0781,4,2025,2,27,Augmentasi
+2025-05-06,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0094,0.076,5,2025,2,6,Augmentasi
+2025-05-13,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0068,0.0824,5,2025,2,13,Augmentasi
+2025-05-16,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0099,0.0748,5,2025,2,16,Augmentasi
+2025-05-20,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.01,0.083,5,2025,2,20,Asli
+2025-06-02,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0051,0.0846,6,2025,2,2,Augmentasi
+2025-06-12,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.006,0.089,6,2025,2,12,Asli
+2025-06-16,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Gudang PKS Surya,0.0115,0.081,6,2025,2,16,Augmentasi
+2025-06-23,"Kemasan B3 (Selang Bekas, Drum Bekas, Fiber Bekas, Jerigen Bekas, dan Goni Bekas)",Water Treatment,0.0055,0.0891,6,2025,2,23,Augmentasi
+2023-01-27,Oli Bekas,Genset,0.0405,0.0405,1,2023,1,27,Asli
+2023-01-27,Oli Bekas,Genset,0.0412,0.0411,1,2023,1,27,Augmentasi
+2023-01-27,Oli Bekas,Genset,0.0353,0.0411,1,2023,1,27,Augmentasi
+2023-01-27,Oli Bekas,Genset,0.0354,0.043,1,2023,1,27,Augmentasi
+2023-02-07,Oli Bekas,"Genset,Colt diesel",0.0631,0.0968,2,2023,1,7,Augmentasi
+2023-02-14,Oli Bekas,Genset,0.0406,0.0407,2,2023,1,14,Augmentasi
+2023-02-18,Oli Bekas,"Genset,Colt diesel",0.0619,0.0962,2,2023,1,18,Augmentasi
+2023-02-18,Oli Bekas,"Genset,Colt diesel",0.0654,0.1072,2,2023,1,18,Augmentasi
+2023-02-19,Oli Bekas,"Genset,Colt diesel",0.0594,0.0971,2,2023,1,19,Augmentasi
+2023-02-20,Oli Bekas,"Genset,Colt diesel",0.0612,0.1017,2,2023,1,20,Asli
+2023-02-23,Oli Bekas,Genset,0.0428,0.0415,2,2023,1,23,Augmentasi
+2023-02-25,Oli Bekas,Genset,0.0458,0.0365,2,2023,1,25,Augmentasi
+2023-02-28,Oli Bekas,"Genset,Colt diesel",0.0632,0.099,2,2023,1,28,Augmentasi
+2023-03-15,Oli Bekas,"Genset,Colt diesel",0.0556,0.1077,3,2023,1,15,Augmentasi
+2023-03-17,Oli Bekas,Genset,0.0285,0.175,3,2023,1,17,Augmentasi
+2023-03-21,Oli Bekas,Genset,0.0236,0.1889,3,2023,1,21,Augmentasi
+2023-03-24,Oli Bekas,Gens & Loader,0.045,0.1467,3,2023,1,24,Asli
+2023-03-26,Oli Bekas,Gens & Loader,0.041,0.1601,3,2023,1,26,Augmentasi
+2023-03-31,Oli Bekas,Genset,0.0298,0.1759,3,2023,1,31,Augmentasi
+2023-04-16,Oli Bekas,Genset,0.0261,0.1728,4,2023,2,16,Asli
+2023-04-21,Oli Bekas,Genset & Loader,0.0455,0.2256,4,2023,2,21,Augmentasi
+2023-04-22,Oli Bekas,Genset & Loader,0.0384,0.2069,4,2023,2,22,Augmentasi
+2023-04-28,Oli Bekas,Genset,0.0224,0.171,4,2023,2,28,Augmentasi
+2023-04-28,Oli Bekas,Genset & Loader,0.0417,0.2204,4,2023,2,28,Augmentasi
+2023-04-28,Oli Bekas,Genset & Loader,0.0491,0.2182,4,2023,2,28,Augmentasi
+2023-05-05,Oli Bekas,Genset & Loader,0.0461,0.2263,5,2023,2,5,Augmentasi
+2023-05-10,Oli Bekas,Genset & Loader,0.0403,0.213,5,2023,2,10,Augmentasi
+2023-05-13,Oli Bekas,Genset & Loader,0.049,0.2234,5,2023,2,13,Augmentasi
+2023-05-13,Oli Bekas,Genset,0.0278,0.1677,5,2023,2,13,Augmentasi
+2023-05-15,Oli Bekas,Genset,0.0284,0.1806,5,2023,2,15,Augmentasi
+2023-05-21,Oli Bekas,Genset & Loader,0.045,0.2178,5,2023,2,21,Asli
+2023-05-24,Oli Bekas,Genset & Loader,0.0455,0.2138,5,2023,2,24,Augmentasi
+2023-06-07,Oli Bekas,Genset,0.059,0.2951,6,2023,2,7,Augmentasi
+2023-06-09,Oli Bekas,Genset,0.0546,0.262,6,2023,2,9,Augmentasi
+2023-06-11,Oli Bekas,Genset,0.061,0.2912,6,2023,2,11,Augmentasi
+2023-06-16,Oli Bekas,Genset,0.0572,0.2968,6,2023,2,16,Augmentasi
+2023-06-23,Oli Bekas,Loader SDLG,0.0163,0.3067,6,2023,2,23,Augmentasi
+2023-06-23,Oli Bekas,Genset,0.0467,0.2959,6,2023,2,23,Augmentasi
+2023-06-24,Oli Bekas,Genset,0.0571,0.2604,6,2023,2,24,Augmentasi
+2023-06-26,Oli Bekas,Genset,0.0531,0.2709,6,2023,2,26,Asli
+2023-06-26,Oli Bekas,Genset No. 3,0.0236,0.2808,6,2023,2,26,Augmentasi
+2023-07-09,Oli Bekas,Genset No. 3,0.0196,0.3068,7,2023,3,9,Augmentasi
+2023-07-09,Oli Bekas,Genset No. 3,0.0225,0.3062,7,2023,3,9,Augmentasi
+2023-07-11,Oli Bekas,Genset,0.0508,0.2975,7,2023,3,11,Augmentasi
+2023-07-16,Oli Bekas,Loader SDLG,0.018,0.2889,7,2023,3,16,Asli
+2023-07-16,Oli Bekas,Loader SDLG,0.0165,0.2998,7,2023,3,16,Augmentasi
+2023-07-17,Oli Bekas,Genset No. 3,0.0225,0.3114,7,2023,3,17,Asli
+2023-07-18,Oli Bekas,Genset No. 3,0.0207,0.2996,7,2023,3,18,Augmentasi
+2023-07-19,Oli Bekas,Loader SDLG,0.0205,0.3188,7,2023,3,19,Augmentasi
+2023-07-20,Oli Bekas,Genset No. 3,0.0241,0.3005,7,2023,3,20,Augmentasi
+2023-07-22,Oli Bekas,Genset,0.0547,0.269,7,2023,3,22,Augmentasi
+2023-07-24,Oli Bekas,Genset No. 3,0.02,0.3096,7,2023,3,24,Augmentasi
+2023-07-29,Oli Bekas,Loader SDLG,0.0193,0.2982,7,2023,3,29,Augmentasi
+2023-07-29,Oli Bekas,Genset CAT No.2,0.0284,0.3916,7,2023,3,29,Augmentasi
+2023-08-03,Oli Bekas,Genset CAT No.2,0.024,0.365,8,2023,3,3,Augmentasi
+2023-08-05,Oli Bekas,Loader SDLG,0.0168,0.3611,8,2023,3,5,Augmentasi
+2023-08-05,Oli Bekas,Loader SDLG,0.017,0.4008,8,2023,3,5,Augmentasi
+2023-08-06,Oli Bekas,Loader SDLG,0.018,0.4226,8,2023,3,6,Augmentasi
+2023-08-06,Oli Bekas,Loader SDLG,0.02,0.3207,8,2023,3,6,Augmentasi
+2023-08-07,Oli Bekas,Genset CAT No.2,0.027,0.3497,8,2023,3,7,Augmentasi
+2023-08-08,Oli Bekas,Loader SDLG,0.018,0.3294,8,2023,3,8,Asli
+2023-08-08,Oli Bekas,Loader SDLG,0.0171,0.3352,8,2023,3,8,Augmentasi
+2023-08-09,Oli Bekas,Loader SDLG,0.018,0.3135,8,2023,3,9,Augmentasi
+2023-08-09,Oli Bekas,Genset No. 3,0.0247,0.2849,8,2023,3,9,Augmentasi
+2023-08-10,Oli Bekas,Loader SDLG,0.0199,0.2841,8,2023,3,10,Augmentasi
+2023-08-11,Oli Bekas,Genset No. 4,0.0081,0.3375,8,2023,3,11,Asli
+2023-08-11,Oli Bekas,Loader SDLG,0.0181,0.2907,8,2023,3,11,Augmentasi
+2023-08-16,Oli Bekas,Loader SDLG,0.0155,0.3592,8,2023,3,16,Augmentasi
+2023-08-18,Oli Bekas,Genset CAT No.2,0.027,0.3645,8,2023,3,18,Asli
+2023-08-18,Oli Bekas,Loader SDLG,0.0187,0.3107,8,2023,3,18,Augmentasi
+2023-08-18,Oli Bekas,Loader SDLG,0.0154,0.4207,8,2023,3,18,Augmentasi
+2023-08-19,Oli Bekas,Loader SDLG,0.0158,0.4197,8,2023,3,19,Augmentasi
+2023-08-22,Oli Bekas,Loader SDLG,0.0169,0.353,8,2023,3,22,Augmentasi
+2023-08-27,Oli Bekas,Loader SDLG,0.0189,0.3092,8,2023,3,27,Augmentasi
+2023-08-27,Oli Bekas,Genset CAT No.1,0.0309,0.4304,8,2023,3,27,Augmentasi
+2023-08-28,Oli Bekas,Colt Diesel BM 9939 AI,0.0081,0.3726,8,2023,3,28,Asli
+2023-09-01,Oli Bekas,Loader SDLG,0.0154,0.4058,9,2023,3,1,Augmentasi
+2023-09-03,Oli Bekas,Loader SDLG,0.018,0.3906,9,2023,3,3,Asli
+2023-09-05,Oli Bekas,Loader SDLG,0.0197,0.3651,9,2023,3,5,Augmentasi
+2023-09-06,Oli Bekas,Genset CAT No.2,0.0258,0.358,9,2023,3,6,Augmentasi
+2023-09-07,Oli Bekas,Genset CAT No.2,0.0272,0.3446,9,2023,3,7,Augmentasi
+2023-09-07,Oli Bekas,Loader SDLG,0.0158,0.3125,9,2023,3,7,Augmentasi
+2023-09-12,Oli Bekas,Loader SDLG,0.0187,0.4419,9,2023,3,12,Augmentasi
+2023-09-25,Oli Bekas,Genset CAT No.1,0.027,0.4176,9,2023,3,25,Asli
+2023-09-29,Oli Bekas,Genset No. 4,0.0082,0.4611,9,2023,3,29,Augmentasi
+2023-10-01,Oli Bekas,Loader SDLG,0.018,0.4356,10,2023,4,1,Asli
+2023-10-02,Oli Bekas,Genset CAT No.1,0.0286,0.4279,10,2023,4,2,Augmentasi
+2023-10-04,Oli Bekas,Genset No. 4,0.0074,0.4397,10,2023,4,4,Augmentasi
+2023-10-06,Oli Bekas,Genset CAT No.1,0.029,0.4166,10,2023,4,6,Augmentasi
+2023-10-10,Oli Bekas,Loader SDLG,0.0174,0.4342,10,2023,4,10,Augmentasi
+2023-10-12,Oli Bekas,Genset CAT No.1,0.0262,0.4425,10,2023,4,12,Augmentasi
+2023-10-16,Oli Bekas,Loader SDLG,0.0188,0.4731,10,2023,4,16,Augmentasi
+2023-10-19,Oli Bekas,Loader SDLG,0.0189,0.4018,10,2023,4,19,Augmentasi
+2023-10-20,Oli Bekas,Genset No. 4,0.0081,0.4437,10,2023,4,20,Asli
+2023-10-20,Oli Bekas,Genset No. 4,0.007,0.4603,10,2023,4,20,Augmentasi
+2023-10-20,Oli Bekas,Loader SDLG,0.0189,0.4951,10,2023,4,20,Augmentasi
+2023-10-24,Oli Bekas,Genset CAT No.2,0.0292,0.472,10,2023,4,24,Augmentasi
+2023-10-26,Oli Bekas,Genset CAT No.2,0.0252,0.5076,10,2023,4,26,Augmentasi
+2023-10-28,Oli Bekas,Genset CAT No.2,0.023,0.5157,10,2023,4,28,Augmentasi
+2023-10-29,Oli Bekas,Loader SDLG,0.018,0.4617,10,2023,4,29,Asli
+2023-11-01,Oli Bekas,Genset CAT No.2,0.0285,0.4968,11,2023,4,1,Augmentasi
+2023-11-03,Oli Bekas,Loader SDLG,0.0185,0.467,11,2023,4,3,Augmentasi
+2023-11-05,Oli Bekas,Genset No. 4,0.0084,0.4271,11,2023,4,5,Augmentasi
+2023-11-09,Oli Bekas,Genset CAT No.2,0.0256,0.5059,11,2023,4,9,Augmentasi
+2023-11-09,Oli Bekas,Genset CAT No.2,0.0261,0.5254,11,2023,4,9,Augmentasi
+2023-11-14,Oli Bekas,Genset CAT No.2,0.0238,0.5138,11,2023,4,14,Augmentasi
+2023-11-19,Oli Bekas,Genset No. 4,0.0092,0.4392,11,2023,4,19,Augmentasi
+2023-11-22,Oli Bekas,Genset CAT No.2,0.027,0.4887,11,2023,4,22,Asli
+2023-11-22,Oli Bekas,Loader SDLG,0.0192,0.503,11,2023,4,22,Augmentasi
+2023-11-29,Oli Bekas,Genset CAT No.1,0.0296,0.5334,11,2023,4,29,Augmentasi
+2023-12-10,Oli Bekas,Genset No. 4,0.0086,0.5315,12,2023,4,10,Augmentasi
+2023-12-10,Oli Bekas,Loader SDLG,0.0189,0.5315,12,2023,4,10,Augmentasi
+2023-12-13,Oli Bekas,Genset No. 4,0.007,0.4892,12,2023,4,13,Augmentasi
+2023-12-15,Oli Bekas,Genset CAT No.2,0.024,0.4921,12,2023,4,15,Augmentasi
+2023-12-16,Oli Bekas,Loader SDLG,0.0192,0.5571,12,2023,4,16,Augmentasi
+2023-12-21,Oli Bekas,Genset CAT No.1,0.027,0.5157,12,2023,4,21,Asli
+2023-12-22,Oli Bekas,Genset CAT No.1,0.03,0.5261,12,2023,4,22,Augmentasi
+2023-12-24,Oli Bekas,Loader SDLG,0.018,0.5337,12,2023,4,24,Asli
+2023-12-26,Oli Bekas,Genset CAT No.1,0.0267,0.4886,12,2023,4,26,Augmentasi
+2023-12-28,Oli Bekas,Genset No. 4,0.0081,0.5418,12,2023,4,28,Asli
+2023-12-28,Oli Bekas,Cold Diesel BM 9939 AI,0.0071,0.0087,12,2023,4,28,Augmentasi
+2024-01-03,Oli Bekas,Cold Diesel BM 9939 AI,0.0091,0.0082,1,2024,1,3,Augmentasi
+2024-01-05,Oli Bekas,Loader SDLG,0.0169,0.5109,1,2024,1,5,Augmentasi
+2024-01-06,Oli Bekas,Genset No. 4,0.009,0.5148,1,2024,1,6,Augmentasi
+2024-01-06,Oli Bekas,Genset CAT No.1,0.0294,0.5482,1,2024,1,6,Augmentasi
+2024-01-08,Oli Bekas,Cold Diesel BM 9939 AI,0.0085,0.0085,1,2024,1,8,Augmentasi
+2024-01-09,Oli Bekas,Cold Diesel BM 9939 AI,0.0075,0.0086,1,2024,1,9,Augmentasi
+2024-01-12,Oli Bekas,Loader SDLG,0.0187,0.5062,1,2024,1,12,Augmentasi
+2024-01-13,Oli Bekas,Loader SDLG,18.7239,27.1789,1,2024,1,13,Augmentasi
+2024-01-20,Oli Bekas,Cold Diesel BM 9939 AI,7.3964,8.3584,1,2024,1,20,Augmentasi
+2024-01-23,Oli Bekas,Genset No. 4,0.0077,0.5205,1,2024,1,23,Augmentasi
+2024-01-23,Oli Bekas,Loader SDLG,16.3539,27.5468,1,2024,1,23,Augmentasi
+2024-01-23,Oli Bekas,Cold Diesel BM 9939 AI,7.762,7.8774,1,2024,1,23,Augmentasi
+2024-01-25,Oli Bekas,Loader SDLG,0.0189,0.0418,1,2024,1,25,Augmentasi
+2024-01-26,Oli Bekas,Cold Diesel BM 9939 AI,8.1,8.1,1,2024,1,26,Asli
+2024-01-26,Oli Bekas,Cold Diesel BM 9939 AI,0.0081,0.0081,1,2024,1,26,Asli
+2024-01-26,Oli Bekas,Genset No. 4,0.0084,0.5777,1,2024,1,26,Augmentasi
+2024-01-27,Oli Bekas,Loader SDLG,18.0,26.1,1,2024,1,27,Asli
+2024-01-27,Oli Bekas,Loader SDLG,0.018,0.0261,1,2024,1,27,Asli
+2024-01-28,Oli Bekas,Loader SDLG,19.4728,24.3609,1,2024,1,28,Augmentasi
+2024-01-29,Oli Bekas,Genset No. 4,0.0093,0.0502,1,2024,1,29,Augmentasi
+2024-01-29,Oli Bekas,Genset No. 4,0.0091,0.0537,1,2024,1,29,Augmentasi
+2024-01-31,Oli Bekas,Loader SDLG,0.0176,0.0414,1,2024,1,31,Augmentasi
+2024-01-31,Oli Bekas,Loader SDLG,18.3821,43.3829,1,2024,1,31,Augmentasi
+2024-02-02,Oli Bekas,Genset No. 4,8.2281,56.9442,2,2024,1,2,Augmentasi
+2024-02-03,Oli Bekas,Loader SDLG,19.8067,41.3282,2,2024,1,3,Augmentasi
+2024-02-04,Oli Bekas,Loader SDLG,0.0205,0.0473,2,2024,1,4,Augmentasi
+2024-02-07,Oli Bekas,Loader SDLG,0.0166,0.0264,2,2024,1,7,Augmentasi
+2024-02-10,Oli Bekas,Loader SDLG,17.5571,23.4933,2,2024,1,10,Augmentasi
+2024-02-11,Oli Bekas,Genset No. 4,8.3884,55.6749,2,2024,1,11,Augmentasi
+2024-02-12,Oli Bekas,Cold Diesel BM 9939 AI,0.0071,0.0084,2,2024,1,12,Augmentasi
+2024-02-13,Oli Bekas,Loader SDLG,0.0198,0.0241,2,2024,1,13,Augmentasi
+2024-02-14,Oli Bekas,Loader SDLG,0.0175,0.0397,2,2024,1,14,Augmentasi
+2024-02-15,Oli Bekas,Loader SDLG,0.0171,0.0242,2,2024,1,15,Augmentasi
+2024-02-16,Oli Bekas,Loader SDLG,0.0161,0.026,2,2024,1,16,Augmentasi
+2024-02-17,Oli Bekas,Loader SDLG,18.3799,64.0805,2,2024,1,17,Augmentasi
+2024-02-19,Oli Bekas,Loader SDLG,17.4862,74.8738,2,2024,1,19,Augmentasi
+2024-02-19,Oli Bekas,Genset No. 4,7.2772,51.3776,2,2024,1,19,Augmentasi
+2024-02-22,Oli Bekas,Loader SDLG,18.0,44.1,2,2024,1,22,Asli
+2024-02-22,Oli Bekas,Loader SDLG,0.018,0.0441,2,2024,1,22,Asli
+2024-02-23,Oli Bekas,Genset No. 4,7.5935,47.9944,2,2024,1,23,Augmentasi
+2024-02-24,Oli Bekas,Genset No. 4,8.1,52.2,2,2024,1,24,Asli
+2024-02-24,Oli Bekas,Genset No. 4,0.0081,0.0522,2,2024,1,24,Asli
+2024-02-26,Oli Bekas,Genset CAT No. 1,0.0259,0.0996,2,2024,1,26,Augmentasi
+2024-02-26,Oli Bekas,Genset No. 4,0.007,0.0519,2,2024,1,26,Augmentasi
+2024-02-27,Oli Bekas,Genset No. 4,0.0072,0.0563,2,2024,1,27,Augmentasi
+2024-02-27,Oli Bekas,Genset CAT No. 1,0.0247,0.1032,2,2024,1,27,Augmentasi
+2024-02-28,Oli Bekas,Genset No. 4,0.0075,0.0549,2,2024,1,28,Augmentasi
+2024-02-28,Oli Bekas,Genset CAT No. 1,26.9917,89.4908,2,2024,1,28,Augmentasi
+2024-02-28,Oli Bekas,Genset CAT No. 1,0.0308,0.0931,2,2024,1,28,Augmentasi
+2024-02-28,Oli Bekas,Genset No. 4,0.009,0.0475,2,2024,1,28,Augmentasi
+2024-02-29,Oli Bekas,Loader SDLG,0.0168,0.0403,2,2024,1,29,Augmentasi
+2024-03-01,Oli Bekas,Genset No. 4,0.0085,0.0535,3,2024,1,1,Augmentasi
+2024-03-01,Oli Bekas,Loader SDLG,0.0207,0.0765,3,2024,1,1,Augmentasi
+2024-03-04,Oli Bekas,Loader SDLG,0.0191,0.0417,3,2024,1,4,Augmentasi
+2024-03-05,Oli Bekas,Loader SDLG,20.1085,46.8546,3,2024,1,5,Augmentasi
+2024-03-05,Oli Bekas,Loader SDLG,20.0404,70.6866,3,2024,1,5,Augmentasi
+2024-03-06,Oli Bekas,Genset No. 4,8.1471,54.793,3,2024,1,6,Augmentasi
+2024-03-06,Oli Bekas,Genset No. 4,8.4007,53.2829,3,2024,1,6,Augmentasi
+2024-03-07,Oli Bekas,Loader SDLG,0.0163,0.0748,3,2024,1,7,Augmentasi
+2024-03-09,Oli Bekas,Loader SDLG,0.0189,0.0412,3,2024,1,9,Augmentasi
+2024-03-09,Oli Bekas,Loader SDLG,17.9968,73.815,3,2024,1,9,Augmentasi
+2024-03-10,Oli Bekas,Loader SDLG,0.016,0.0645,3,2024,1,10,Augmentasi
+2024-03-16,Oli Bekas,Loader SDLG,0.0165,0.0461,3,2024,1,16,Augmentasi
+2024-03-16,Oli Bekas,Genset CAT No. 1,0.0286,0.1029,3,2024,1,16,Augmentasi
+2024-03-17,Oli Bekas,Loader SDLG,18.0,70.2,3,2024,1,17,Asli
+2024-03-17,Oli Bekas,Loader SDLG,0.018,0.0702,3,2024,1,17,Asli
+2024-03-17,Oli Bekas,Loader SDLG,0.0191,0.0652,3,2024,1,17,Augmentasi
+2024-03-18,Oli Bekas,Loader SDLG,17.1768,48.404,3,2024,1,18,Augmentasi
+2024-03-20,Oli Bekas,Loader SDLG,0.0165,0.0717,3,2024,1,20,Augmentasi
+2024-03-22,Oli Bekas,Genset No. 4,8.8121,107.6902,3,2024,1,22,Augmentasi
+2024-03-25,Oli Bekas,Genset CAT No. 1,27.0,97.2,3,2024,1,25,Asli
+2024-03-25,Oli Bekas,Genset CAT No. 1,0.027,0.0972,3,2024,1,25,Asli
+2024-03-25,Oli Bekas,Genset No. 4,8.2581,101.2929,3,2024,1,25,Augmentasi
+2024-03-26,Oli Bekas,Genset No. 4,7.9762,101.8463,3,2024,1,26,Augmentasi
+2024-03-29,Oli Bekas,Loader SDLG,0.0191,0.1463,3,2024,1,29,Augmentasi
+2024-04-01,Oli Bekas,Genset CAT No. 1,0.0272,0.1031,4,2024,2,1,Augmentasi
+2024-04-02,Oli Bekas,Genset CAT No. 1,23.724,92.049,4,2024,2,2,Augmentasi
+2024-04-04,Oli Bekas,Genset No. 2,23.487,132.843,4,2024,2,4,Augmentasi
+2024-04-05,Oli Bekas,Genset CAT No. 1,0.0243,0.1049,4,2024,2,5,Augmentasi
+2024-04-05,Oli Bekas,Loader SDLG,0.0184,0.162,4,2024,2,5,Augmentasi
+2024-04-06,Oli Bekas,Genset No. 4,0.0092,0.1096,4,2024,2,6,Augmentasi
+2024-04-06,Oli Bekas,Loader SDLG,0.0192,0.1372,4,2024,2,6,Augmentasi
+2024-04-06,Oli Bekas,Genset CAT No. 1,30.7171,93.4233,4,2024,2,6,Augmentasi
+2024-04-11,Oli Bekas,Genset No. 2,28.0587,136.4478,4,2024,2,11,Augmentasi
+2024-04-13,Oli Bekas,Loader SDLG,0.0197,0.0678,4,2024,2,13,Augmentasi
+2024-04-15,Oli Bekas,Loader SDLG,0.0189,0.1385,4,2024,2,15,Augmentasi
+2024-04-16,Oli Bekas,Loader SDLG,0.0173,0.1463,4,2024,2,16,Augmentasi
+2024-04-16,Oli Bekas,Genset No. 4,7.553,107.493,4,2024,2,16,Augmentasi
+2024-04-16,Oli Bekas,Genset CAT No. 1,0.0265,0.0997,4,2024,2,16,Augmentasi
+2024-04-16,Oli Bekas,Genset CAT No. 1,0.0281,0.0903,4,2024,2,16,Augmentasi
+2024-04-17,Oli Bekas,Genset No. 4,8.1,105.3,4,2024,2,17,Asli
+2024-04-17,Oli Bekas,Genset No. 4,0.0081,0.1053,4,2024,2,17,Asli
+2024-04-18,Oli Bekas,Genset No. 2,27.0,132.3,4,2024,2,18,Asli
+2024-04-18,Oli Bekas,Genset No. 2,0.027,0.1323,4,2024,2,18,Asli
+2024-04-18,Oli Bekas,Loader SDLG,17.7642,141.4683,4,2024,2,18,Augmentasi
+2024-04-20,Oli Bekas,Loader SDLG,18.4436,139.3915,4,2024,2,20,Augmentasi
+2024-04-24,Oli Bekas,Wheel Loader WA180-3,0.0169,0.1523,4,2024,2,24,Augmentasi
+2024-04-26,Oli Bekas,Wheel Loader WA180-3,0.0178,0.1789,4,2024,2,26,Augmentasi
+2024-04-28,Oli Bekas,Loader SDLG,18.0,150.3,4,2024,2,28,Asli
+2024-04-28,Oli Bekas,Loader SDLG,0.018,0.1503,4,2024,2,28,Asli
+2024-04-28,Oli Bekas,Wheel Loader WA180-3,0.0161,0.1673,4,2024,2,28,Augmentasi
+2024-05-08,Oli Bekas,Genset No. 2,0.0292,0.1348,5,2024,2,8,Augmentasi
+2024-05-08,Oli Bekas,Genset No. 2,0.0241,0.1314,5,2024,2,8,Augmentasi
+2024-05-10,Oli Bekas,Loader SDLG,0.0171,0.1354,5,2024,2,10,Augmentasi
+2024-05-12,Oli Bekas,Wheel Loader WA180-3,18.0,168.3,5,2024,2,12,Asli
+2024-05-12,Oli Bekas,Wheel Loader WA180-3,0.018,0.1683,5,2024,2,12,Asli
+2024-05-12,Oli Bekas,Genset No. 2,0.0246,0.1332,5,2024,2,12,Augmentasi
+2024-05-14,Oli Bekas,Loader SDLG,17.9157,151.2,5,2024,2,14,Augmentasi
+2024-05-14,Oli Bekas,Loader SDLG,0.0177,0.1494,5,2024,2,14,Augmentasi
+2024-05-16,Oli Bekas,Wheel Loader WA180-3,16.9437,172.0579,5,2024,2,16,Augmentasi
+2024-05-17,Oli Bekas,Wheel Loader WA180-3,0.0198,0.2022,5,2024,2,17,Augmentasi
+2024-05-18,Oli Bekas,Genset No. 2,0.0231,0.1295,5,2024,2,18,Augmentasi
+2024-05-21,Oli Bekas,Wheel Loader WA180-3,20.0235,186.881,5,2024,2,21,Augmentasi
+2024-05-22,Oli Bekas,Wheel Loader WA180-3,0.0169,0.2001,5,2024,2,22,Augmentasi
+2024-05-25,Oli Bekas,Wheel Loader WA180-3,18.9632,173.2176,5,2024,2,25,Augmentasi
+2024-05-25,Oli Bekas,Wheel Loader WA180-3,0.0169,0.1614,5,2024,2,25,Augmentasi
+2024-05-31,Oli Bekas,Wheel Loader WA180-3,18.8524,171.8327,5,2024,2,31,Augmentasi
+2024-06-02,Oli Bekas,Wheel Loader WA180-3,0.0171,0.1748,6,2024,2,2,Augmentasi
+2024-06-02,Oli Bekas,Wheel Loader WA180-3,18.1191,180.3156,6,2024,2,2,Augmentasi
+2024-06-03,Oli Bekas,Cold Diesel BM 9939 AI,0.008,0.2021,6,2024,2,3,Augmentasi
+2024-06-04,Oli Bekas,Wheel Loader WA180-3,16.9475,174.0242,6,2024,2,4,Augmentasi
+2024-06-04,Oli Bekas,Wheel Loader WA180-3,0.02,0.153,6,2024,2,4,Augmentasi
+2024-06-05,Oli Bekas,Wheel Loader WA180-3,0.0156,0.1789,6,2024,2,5,Augmentasi
+2024-06-08,Oli Bekas,Wheel Loader WA180-3,19.1117,173.1531,6,2024,2,8,Augmentasi
+2024-06-09,Oli Bekas,Wheel Loader WA180-3,18.0,186.3,6,2024,2,9,Asli
+2024-06-09,Oli Bekas,Wheel Loader WA180-3,0.018,0.1863,6,2024,2,9,Asli
+2024-06-09,Oli Bekas,Wheel Loader WA180-3,17.0462,163.0342,6,2024,2,9,Augmentasi
+2024-06-11,Oli Bekas,Wheel Loader WA180-3,0.0178,0.204,6,2024,2,11,Augmentasi
+2024-06-12,Oli Bekas,Wheel Loader WA180-3,16.2562,169.2136,6,2024,2,12,Augmentasi
+2024-06-12,Oli Bekas,Wheel Loader WA180-3,0.0189,0.2287,6,2024,2,12,Augmentasi
+2024-06-14,Oli Bekas,Genset No. 4,0.008,0.2061,6,2024,2,14,Augmentasi
+2024-06-15,Oli Bekas,Cold Diesel BM 9939 AI,0.009,0.1975,6,2024,2,15,Augmentasi
+2024-06-15,Oli Bekas,Genset No. 4,0.0088,0.2036,6,2024,2,15,Augmentasi
+2024-06-20,Oli Bekas,Wheel Loader WA180-3,0.0164,0.2093,6,2024,2,20,Augmentasi
+2024-06-22,Oli Bekas,Cold Diesel BM 9939 AI,0.0075,0.1819,6,2024,2,22,Augmentasi
+2024-06-22,Oli Bekas,Genset No. 2,0.0278,0.2577,6,2024,2,22,Augmentasi
+2024-06-26,Oli Bekas,Wheel Loader WA180-3,19.5378,180.1699,6,2024,2,26,Augmentasi
+2024-06-26,Oli Bekas,Wheel Loader WA180-3,0.0155,0.1853,6,2024,2,26,Augmentasi
+2024-07-01,Oli Bekas,Genset No. 2,0.0236,0.2317,7,2024,3,1,Augmentasi
+2024-07-02,Oli Bekas,Cold Diesel BM 9939 AI,0.0081,0.1944,7,2024,3,2,Asli
+2024-07-03,Oli Bekas,Cold Diesel BM 9939 AI,0.007,0.1882,7,2024,3,3,Augmentasi
+2024-07-03,Oli Bekas,Cold Diesel BM 9939 AI,0.008,0.2018,7,2024,3,3,Augmentasi
+2024-07-05,Oli Bekas,Genset No. 2,0.0277,0.2231,7,2024,3,5,Augmentasi
+2024-07-06,Oli Bekas,Genset No. 2,0.0257,0.2261,7,2024,3,6,Augmentasi
+2024-07-08,Oli Bekas,Genset No. 4,0.0081,0.2025,7,2024,3,8,Asli
+2024-07-08,Oli Bekas,Wheel Loader WA180-3,0.017,0.2359,7,2024,3,8,Augmentasi
+2024-07-09,Oli Bekas,Wheel Loader WA180-3,0.018,0.2205,7,2024,3,9,Asli
+2024-07-11,Oli Bekas,Cold Diesel BM 9939 AI,0.0077,0.1763,7,2024,3,11,Augmentasi
+2024-07-13,Oli Bekas,Genset No. 2,0.027,0.2475,7,2024,3,13,Asli
+2024-07-13,Oli Bekas,Cold Diesel BM 9939 AI,0.0082,0.2064,7,2024,3,13,Augmentasi
+2024-07-14,Oli Bekas,Genset No. 1,0.0231,0.2666,7,2024,3,14,Augmentasi
+2024-07-15,Oli Bekas,Genset No. 2,0.0265,0.2342,7,2024,3,15,Augmentasi
+2024-07-15,Oli Bekas,Wheel Loader WA180-3,0.0155,0.2216,7,2024,3,15,Augmentasi
+2024-07-17,Oli Bekas,Genset No. 4,0.0091,0.1874,7,2024,3,17,Augmentasi
+2024-07-17,Oli Bekas,Genset No. 4,0.0071,0.1959,7,2024,3,17,Augmentasi
+2024-07-19,Oli Bekas,Wheel Loader WA180-3,0.02,0.24,7,2024,3,19,Augmentasi
+2024-07-19,Oli Bekas,Cold Diesel BM 9939 AI,0.0089,0.1796,7,2024,3,19,Augmentasi
+2024-07-22,Oli Bekas,Cold Diesel BM 9939 AI,0.0092,0.2049,7,2024,3,22,Augmentasi
+2024-07-24,Oli Bekas,Loader SDLG,0.0199,0.2912,7,2024,3,24,Augmentasi
+2024-07-27,Oli Bekas,Genset No. 4,0.0086,0.212,7,2024,3,27,Augmentasi
+2024-07-28,Oli Bekas,Genset No. 1,0.0239,0.2701,7,2024,3,28,Augmentasi
+2024-07-31,Oli Bekas,Genset No. 3,0.0245,0.2843,7,2024,3,31,Augmentasi
+2024-08-03,Oli Bekas,Genset No. 1,0.027,0.2745,8,2024,3,3,Asli
+2024-08-05,Oli Bekas,Genset No. 4,0.0074,0.2207,8,2024,3,5,Augmentasi
+2024-08-06,Oli Bekas,Loader SDLG,0.0205,0.288,8,2024,3,6,Augmentasi
+2024-08-09,Oli Bekas,Loader SDLG,0.0155,0.3007,8,2024,3,9,Augmentasi
+2024-08-10,Oli Bekas,Loader SDLG,0.0198,0.2884,8,2024,3,10,Augmentasi
+2024-08-22,Oli Bekas,Genset No. 3,0.0221,0.3271,8,2024,3,22,Augmentasi
+2024-08-23,Oli Bekas,Loader SDLG,0.018,0.2925,8,2024,3,23,Asli
+2024-08-29,Oli Bekas,Genset No. 3,0.0225,0.315,8,2024,3,29,Asli
+2024-09-01,Oli Bekas,Genset No. 3,0.023,0.2917,9,2024,3,1,Augmentasi
+2024-09-01,Oli Bekas,Genset No. 1,0.0269,0.2988,9,2024,3,1,Augmentasi
+2024-09-08,Oli Bekas,Genset No. 3,0.0215,0.3066,9,2024,3,8,Augmentasi
+2024-09-08,Oli Bekas,Loader SDLG,0.0198,0.3064,9,2024,3,8,Augmentasi
+2024-09-09,Oli Bekas,Loader SDLG,0.0158,0.3368,9,2024,3,9,Augmentasi
+2024-09-12,Oli Bekas,Loader SDLG,0.0171,0.2793,9,2024,3,12,Augmentasi
+2024-09-17,Oli Bekas,Genset No. 4,0.0081,0.3231,9,2024,3,17,Asli
+2024-09-18,Oli Bekas,Loader SDLG,0.0153,0.3235,9,2024,3,18,Augmentasi
+2024-09-20,Oli Bekas,Loader SDLG,0.0199,0.3135,9,2024,3,20,Augmentasi
+2024-09-20,Oli Bekas,Genset No. 3,0.0196,0.3189,9,2024,3,20,Augmentasi
+2024-09-22,Oli Bekas,Loader SDLG,0.018,0.3411,9,2024,3,22,Asli
+2024-09-24,Oli Bekas,Genset No. 1,0.0276,0.3369,9,2024,3,24,Augmentasi
+2024-09-28,Oli Bekas,Genset No. 1,0.027,0.4022,9,2024,3,28,Augmentasi
+2024-09-30,Oli Bekas,Loader SDLG,0.017,0.3131,9,2024,3,30,Augmentasi
+2024-09-30,Oli Bekas,Loader SDLG,0.0163,0.3419,9,2024,3,30,Augmentasi
+2024-10-05,Oli Bekas,Genset No. 4,0.007,0.2979,10,2024,4,5,Augmentasi
+2024-10-10,Oli Bekas,Loader SDLG,0.0198,0.3607,10,2024,4,10,Augmentasi
+2024-10-13,Oli Bekas,Loader SDLG,0.0207,0.3106,10,2024,4,13,Augmentasi
+2024-10-14,Oli Bekas,Genset No. 1,0.027,0.3681,10,2024,4,14,Asli
+2024-10-15,Oli Bekas,Genset No. 1,0.0283,0.363,10,2024,4,15,Augmentasi
+2024-10-17,Oli Bekas,Genset No. 4,0.0082,0.3354,10,2024,4,17,Augmentasi
+2024-10-19,Oli Bekas,Genset No. 1,0.0278,0.3602,10,2024,4,19,Augmentasi
+2024-10-28,Oli Bekas,Genset No. 1,0.0305,0.3441,10,2024,4,28,Augmentasi
+2024-11-04,Oli Bekas,Wheel Loader WA180-3,0.0162,0.3664,11,2024,4,4,Augmentasi
+2024-11-11,Oli Bekas,Genset No. 1,0.0303,0.3328,11,2024,4,11,Augmentasi
+2024-11-12,Oli Bekas,Genset No. 1,0.0248,0.336,11,2024,4,12,Augmentasi
+2024-11-17,Oli Bekas,Wheel Loader WA180-3,0.018,0.3861,11,2024,4,17,Asli
+2024-11-19,Oli Bekas,Wheel Loader WA180-3,0.0191,0.391,11,2024,4,19,Augmentasi
+2024-11-23,Oli Bekas,Wheel Loader WA180-3,0.0175,0.4003,11,2024,4,23,Augmentasi
+2024-11-24,Oli Bekas,Wheel Loader WA180-3,0.0187,0.4048,11,2024,4,24,Augmentasi
+2024-11-26,Oli Bekas,Genset No. 4,0.0079,0.3892,11,2024,4,26,Augmentasi
+2024-11-27,Oli Bekas,Wheel Loader WA180-3,0.0192,0.441,11,2024,4,27,Augmentasi
+2024-11-30,Oli Bekas,Genset No. 4,0.0081,0.3942,11,2024,4,30,Asli
+2024-12-08,Oli Bekas,Genset No. 1,0.0234,0.4179,12,2024,4,8,Augmentasi
+2024-12-14,Oli Bekas,Wheel Loader WA180-3,0.0177,0.3994,12,2024,4,14,Augmentasi
+2024-12-17,Oli Bekas,Wheel Loader WA180-3,0.0175,0.4174,12,2024,4,17,Augmentasi
+2024-12-18,Oli Bekas,Wheel Loader WA180-3,0.018,0.4122,12,2024,4,18,Asli
+2024-12-18,Oli Bekas,Loader SDLG,0.0196,0.0185,12,2024,4,18,Augmentasi
+2024-12-20,Oli Bekas,Genset No. 4,0.0083,0.4145,12,2024,4,20,Augmentasi
+2024-12-20,Oli Bekas,Wheel Loader WA180-3,0.0197,0.4107,12,2024,4,20,Augmentasi
+2024-12-21,Oli Bekas,Wheel Loader WA180-3,0.0162,0.4398,12,2024,4,21,Augmentasi
+2024-12-24,Oli Bekas,Wheel Loader WA180-3,0.0193,0.3714,12,2024,4,24,Augmentasi
+2024-12-25,Oli Bekas,Genset No. 1,0.0249,0.4452,12,2024,4,25,Augmentasi
+2024-12-26,Oli Bekas,Genset No. 1,0.027,0.4392,12,2024,4,26,Asli
+2025-01-01,Oli Bekas,Genset No. 1,0.0272,0.4364,1,2025,1,1,Augmentasi
+2025-01-02,Oli Bekas,Genset No. 1,0.0243,0.4476,1,2025,1,2,Augmentasi
+2025-01-07,Oli Bekas,Genset No. 4,0.0077,0.0242,1,2025,1,7,Augmentasi
+2025-01-11,Oli Bekas,Cold Diesel BM 9939 AI,0.0092,0.0367,1,2025,1,11,Augmentasi
+2025-01-13,Oli Bekas,Cold Diesel BM 9939 AI,0.0091,0.0351,1,2025,1,13,Augmentasi
+2025-01-16,Oli Bekas,Loader SDLG,0.018,0.018,1,2025,1,16,Asli
+2025-01-16,Oli Bekas,Genset No. 4,0.0081,0.0261,1,2025,1,16,Asli
+2025-01-17,Oli Bekas,Cold Diesel BM 9939 AI,0.008,0.0365,1,2025,1,17,Augmentasi
+2025-01-17,Oli Bekas,Loader SDLG,0.0176,0.0519,1,2025,1,17,Augmentasi
+2025-01-23,Oli Bekas,Loader SDLG,0.0181,0.0509,1,2025,1,23,Augmentasi
+2025-01-23,Oli Bekas,Cold Diesel BM 9939 AI,0.0091,0.0351,1,2025,1,23,Augmentasi
+2025-01-24,Oli Bekas,Loader SDLG,0.0174,0.0186,1,2025,1,24,Augmentasi
+2025-01-24,Oli Bekas,Genset No. 4,0.0088,0.0274,1,2025,1,24,Augmentasi
+2025-01-24,Oli Bekas,Genset No. 4,0.0072,0.0239,1,2025,1,24,Augmentasi
+2025-01-28,Oli Bekas,Genset No. 4,0.0088,0.0243,1,2025,1,28,Augmentasi
+2025-01-28,Oli Bekas,Loader SDLG,0.0191,0.0556,1,2025,1,28,Augmentasi
+2025-02-01,Oli Bekas,Loader SDLG,0.0153,0.0165,2,2025,1,1,Augmentasi
+2025-02-02,Oli Bekas,Cold Diesel BM 9939 AI,0.0075,0.0328,2,2025,1,2,Augmentasi
+2025-02-05,Oli Bekas,Genset No. 4,0.0073,0.0287,2,2025,1,5,Augmentasi
+2025-02-06,Oli Bekas,Cold Diesel BM 9939 AI,0.0081,0.0342,2,2025,1,6,Asli
+2025-02-07,Oli Bekas,Loader SDLG,0.0155,0.0482,2,2025,1,7,Augmentasi
+2025-02-07,Oli Bekas,Loader SDLG,0.0165,0.0567,2,2025,1,7,Augmentasi
+2025-02-11,Oli Bekas,Loader SDLG,0.0204,0.0572,2,2025,1,11,Augmentasi
+2025-02-13,Oli Bekas,Loader SDLG,0.0173,0.0495,2,2025,1,13,Augmentasi
+2025-02-16,Oli Bekas,Loader SDLG,0.018,0.0522,2,2025,1,16,Asli
+2025-02-19,Oli Bekas,Genset No. 2,0.0258,0.1105,2,2025,1,19,Augmentasi
+2025-02-20,Oli Bekas,Genset No. 1,0.0283,0.0857,2,2025,1,20,Augmentasi
+2025-02-24,Oli Bekas,Cold Diesel BM 9939 AI,0.0069,0.0324,2,2025,1,24,Augmentasi
+2025-02-27,Oli Bekas,Loader SDLG,0.0167,0.0571,2,2025,1,27,Augmentasi
+2025-03-01,Oli Bekas,Loader SDLG,0.017,0.0528,3,2025,1,1,Augmentasi
+2025-03-02,Oli Bekas,Loader SDLG,0.0166,0.1182,3,2025,1,2,Augmentasi
+2025-03-04,Oli Bekas,Genset No. 1,0.027,0.0792,3,2025,1,4,Asli
+2025-03-05,Oli Bekas,Genset No. 2,0.027,0.1062,3,2025,1,5,Asli
+2025-03-09,Oli Bekas,Genset No. 1,0.0246,0.0721,3,2025,1,9,Augmentasi
+2025-03-09,Oli Bekas,Genset No. 4,0.0079,0.1197,3,2025,1,9,Augmentasi
+2025-03-11,Oli Bekas,Loader SDLG,0.0173,0.0519,3,2025,1,11,Augmentasi
+2025-03-14,Oli Bekas,Genset No. 2,0.0259,0.0996,3,2025,1,14,Augmentasi
+2025-03-15,Oli Bekas,Loader SDLG,0.018,0.1242,3,2025,1,15,Asli
+2025-03-17,Oli Bekas,Genset No. 4,0.007,0.121,3,2025,1,17,Augmentasi
+2025-03-19,Oli Bekas,Genset No. 4,0.0072,0.1395,3,2025,1,19,Augmentasi
+2025-03-27,Oli Bekas,Genset No. 4,0.0081,0.1323,3,2025,1,27,Asli
+2025-03-27,Oli Bekas,Genset No. 2,0.0296,0.0986,3,2025,1,27,Augmentasi
+2025-04-05,Oli Bekas,Loader SDLG,0.0205,0.1618,4,2025,2,5,Augmentasi
+2025-04-06,Oli Bekas,Loader SDLG,0.0197,0.1354,4,2025,2,6,Augmentasi
+2025-04-14,Oli Bekas,Genset No. 3,0.0234,0.181,4,2025,2,14,Augmentasi
+2025-04-17,Oli Bekas,Loader SDLG,0.018,0.1503,4,2025,2,17,Asli
+2025-04-17,Oli Bekas,Genset No. 4,0.0079,0.1852,4,2025,2,17,Augmentasi
+2025-04-21,Oli Bekas,Genset CAT No. 1,0.0309,0.2259,4,2025,2,21,Augmentasi
+2025-04-23,Oli Bekas,Genset No. 3,0.0248,0.1716,4,2025,2,23,Augmentasi
+2025-04-23,Oli Bekas,Loader SDLG,0.0166,0.1528,4,2025,2,23,Augmentasi
+2025-04-24,Oli Bekas,Genset No. 4,0.0084,0.1234,4,2025,2,24,Augmentasi
+2025-04-24,Oli Bekas,Genset CAT No. 1,0.0281,0.2258,4,2025,2,24,Augmentasi
+2025-04-26,Oli Bekas,Loader SDLG,0.0194,0.207,4,2025,2,26,Augmentasi
+2025-04-28,Oli Bekas,Genset No. 4,0.0088,0.1637,4,2025,2,28,Augmentasi
+2025-04-30,Oli Bekas,Loader SDLG,0.0156,0.1532,4,2025,2,30,Augmentasi
+2025-05-03,Oli Bekas,Genset No. 4,0.0075,0.1859,5,2025,2,3,Augmentasi
+2025-05-03,Oli Bekas,Genset CAT No. 1,0.0282,0.216,5,2025,2,3,Augmentasi
+2025-05-08,Oli Bekas,Genset No. 3,0.0225,0.1728,5,2025,2,8,Asli
+2025-05-09,Oli Bekas,Genset CAT No. 1,0.029,0.1888,5,2025,2,9,Augmentasi
+2025-05-10,Oli Bekas,Genset No. 4,0.0083,0.1981,5,2025,2,10,Augmentasi
+2025-05-13,Oli Bekas,Loader SDLG,0.0197,0.1592,5,2025,2,13,Augmentasi
+2025-05-14,Oli Bekas,Genset CAT No. 1,0.0285,0.2141,5,2025,2,14,Augmentasi
+2025-05-14,Oli Bekas,Loader SDLG,0.017,0.1476,5,2025,2,14,Augmentasi
+2025-05-16,Oli Bekas,Genset No. 4,0.0081,0.1809,5,2025,2,16,Asli
+2025-05-20,Oli Bekas,Genset CAT No. 1,0.027,0.2079,5,2025,2,20,Asli
+2025-05-22,Oli Bekas,Genset No. 4,0.0075,0.1917,5,2025,2,22,Augmentasi
+2025-05-25,Oli Bekas,Loader SDLG,0.018,0.2259,5,2025,2,25,Asli
+2025-05-25,Oli Bekas,Genset No. 4,0.0075,0.1681,5,2025,2,25,Augmentasi
+2025-05-28,Oli Bekas,Genset No. 4,0.007,0.1686,5,2025,2,28,Augmentasi
+2025-05-30,Oli Bekas,Genset CAT No. 1,0.0283,0.1953,5,2025,2,30,Augmentasi
+2025-05-31,Oli Bekas,Genset No. 3,0.022,0.1772,5,2025,2,31,Augmentasi
+2025-06-07,Oli Bekas,Loader SDLG,0.0165,0.2055,6,2025,2,7,Augmentasi
+2025-06-07,Oli Bekas,Genset No. 3,0.0254,0.1631,6,2025,2,7,Augmentasi
+2025-06-07,Oli Bekas,Genset No. 3,0.0208,0.1792,6,2025,2,7,Augmentasi
+2025-06-09,Oli Bekas,Genset No. 4,0.0079,0.1794,6,2025,2,9,Augmentasi
+2025-06-11,Oli Bekas,Genset No. 4,0.0092,0.1639,6,2025,2,11,Augmentasi
+2025-06-11,Oli Bekas,Genset CAT No. 1,0.024,0.1953,6,2025,2,11,Augmentasi
+2025-06-12,Oli Bekas,Loader SDLG,0.02,0.205,6,2025,2,12,Augmentasi
+2025-06-12,Oli Bekas,Genset CAT No. 1,0.0241,0.2157,6,2025,2,12,Augmentasi
+2025-06-13,Oli Bekas,Loader SDLG,0.0177,0.2339,6,2025,2,13,Augmentasi
+2025-06-14,Oli Bekas,Loader SDLG,0.0179,0.2147,6,2025,2,14,Augmentasi
+2025-06-14,Oli Bekas,Genset CAT No. 1,0.0274,0.2077,6,2025,2,14,Augmentasi
+2025-06-25,Oli Bekas,Loader SDLG,0.018,0.2439,6,2025,2,25,Asli
+2023-03-05,Sarung Tangan Bekas,Pengolahan,0.0027,0.0031,3,2023,1,5,Augmentasi
+2023-03-11,Sarung Tangan Bekas,Pengolahan,0.003,0.003,3,2023,1,11,Asli
+2023-03-12,Sarung Tangan Bekas,Pengolahan,0.0029,0.0029,3,2023,1,12,Augmentasi
+2023-03-14,Sarung Tangan Bekas,Pengolahan,0.0029,0.0032,3,2023,1,14,Augmentasi
+2023-03-23,Sarung Tangan Bekas,Pengolahan,0.0032,0.003,3,2023,1,23,Augmentasi
+2023-03-26,Sarung Tangan Bekas,Pengolahan,0.003,0.0029,3,2023,1,26,Augmentasi
+2023-03-28,Sarung Tangan Bekas,Pengolahan,0.0027,0.003,3,2023,1,28,Augmentasi
+2023-05-18,Sarung Tangan Bekas,Pengolahan,0.0023,0.0056,5,2023,2,18,Augmentasi
+2023-05-20,Sarung Tangan Bekas,Pengolahan,0.0023,0.0062,5,2023,2,20,Augmentasi
+2023-06-08,Sarung Tangan Bekas,Pengolahan,0.0022,0.0052,6,2023,2,8,Augmentasi
+2023-06-10,Sarung Tangan Bekas,Pengolahan,0.0028,0.006,6,2023,2,10,Augmentasi
+2023-06-17,Sarung Tangan Bekas,Pengolahan,0.0026,0.0056,6,2023,2,17,Asli
+2023-07-13,Sarung Tangan Bekas,Pengolahan,0.0027,0.006,7,2023,3,13,Augmentasi
+2023-07-14,Sarung Tangan Bekas,Pengolahan,0.0028,0.0054,7,2023,3,14,Augmentasi
+2023-08-03,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0023,0.0077,8,2023,3,3,Augmentasi
+2023-08-03,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0028,0.0077,8,2023,3,3,Augmentasi
+2023-08-17,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0024,0.0087,8,2023,3,17,Augmentasi
+2023-08-25,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0024,0.0075,8,2023,3,25,Augmentasi
+2023-08-26,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0025,0.0081,8,2023,3,26,Asli
+2023-08-26,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0023,0.0078,8,2023,3,26,Augmentasi
+2023-09-12,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0022,0.0086,9,2023,3,12,Augmentasi
+2023-09-14,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0025,0.0088,9,2023,3,14,Augmentasi
+2023-09-23,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0024,0.0086,9,2023,3,23,Augmentasi
+2023-12-05,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0027,0.012,12,2023,4,5,Augmentasi
+2023-12-08,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0031,0.011,12,2023,4,8,Augmentasi
+2023-12-28,Sarung Tangan Bekas,Pengolahan & Bengkel,0.003,0.0111,12,2023,4,28,Asli
+2024-01-19,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0028,0.0115,1,2024,1,19,Augmentasi
+2024-02-20,Sarung Tangan Bekas,Pengolahan & Bengkel,0.004,0.0034,2,2024,1,20,Augmentasi
+2024-03-06,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0037,0.0034,3,2024,1,6,Augmentasi
+2024-03-07,Sarung Tangan Bekas,Pengolahan & Bengkel,3.6197,3.7859,3,2024,1,7,Augmentasi
+2024-03-09,Sarung Tangan Bekas,Pengolahan & Bengkel,3.5,3.5,3,2024,1,9,Asli
+2024-03-09,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0035,0.0035,3,2024,1,9,Asli
+2024-03-09,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0039,0.0033,3,2024,1,9,Augmentasi
+2024-03-09,Sarung Tangan Bekas,Pengolahan & Bengkel,3.2277,3.444,3,2024,1,9,Augmentasi
+2024-04-01,Sarung Tangan Bekas,Pengolahan & Bengkel,3.5068,3.271,4,2024,2,1,Augmentasi
+2024-04-03,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0033,0.0034,4,2024,2,3,Augmentasi
+2024-05-27,Sarung Tangan Bekas,,2.0987,6.0985,5,2024,2,27,Augmentasi
+2024-05-31,Sarung Tangan Bekas,,2.2132,5.7019,5,2024,2,31,Augmentasi
+2024-06-10,Sarung Tangan Bekas,,1.8996,5.5861,6,2024,2,10,Augmentasi
+2024-06-11,Sarung Tangan Bekas,,0.0018,0.0051,6,2024,2,11,Augmentasi
+2024-06-18,Sarung Tangan Bekas,,0.0022,0.0056,6,2024,2,18,Augmentasi
+2024-06-22,Sarung Tangan Bekas,,2.1,5.6,6,2024,2,22,Asli
+2024-06-22,Sarung Tangan Bekas,,0.0021,0.0056,6,2024,2,22,Asli
+2024-07-19,Sarung Tangan Bekas,,0.0024,0.0056,7,2024,3,19,Augmentasi
+2024-07-19,Sarung Tangan Bekas,,1.9027,5.4958,7,2024,3,19,Augmentasi
+2024-08-24,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0027,0.0084,8,2024,3,24,Augmentasi
+2024-08-27,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0028,0.0087,8,2024,3,27,Augmentasi
+2024-09-03,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0031,0.009,9,2024,3,3,Augmentasi
+2024-09-16,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0027,0.0077,9,2024,3,16,Augmentasi
+2024-09-17,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0029,0.0092,9,2024,3,17,Augmentasi
+2024-09-20,Sarung Tangan Bekas,Pengolahan & Bengkel,0.003,0.0086,9,2024,3,20,Asli
+2024-09-25,Sarung Tangan Bekas,Pengolahan & Bengkel,0.003,0.0087,9,2024,3,25,Augmentasi
+2024-09-27,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0026,0.0078,9,2024,3,27,Augmentasi
+2024-09-27,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0027,0.0094,9,2024,3,27,Augmentasi
+2024-11-30,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0016,0.011,11,2024,4,30,Augmentasi
+2024-12-12,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0013,0.011,12,2024,4,12,Augmentasi
+2024-12-21,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0015,0.0101,12,2024,4,21,Asli
+2024-12-26,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0015,0.0097,12,2024,4,26,Augmentasi
+2025-01-10,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0013,0.0101,1,2025,1,10,Augmentasi
+2025-01-20,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0014,0.0094,1,2025,1,20,Augmentasi
+2025-02-25,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0036,0.0032,2,2025,1,25,Augmentasi
+2025-02-25,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0034,0.0034,2,2025,1,25,Augmentasi
+2025-03-15,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0032,0.0032,3,2025,1,15,Asli
+2025-03-16,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0028,0.0033,3,2025,1,16,Augmentasi
+2025-03-22,Sarung Tangan Bekas,Pengolahan & Bengkel,0.0033,0.003,3,2025,1,22,Augmentasi
