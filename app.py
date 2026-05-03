@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 
 # ─── KONFIGURASI HALAMAN ─────────────────────────────────────
 st.set_page_config(
-    page_title="Sistem Prediksi Limbah B3 - PT Surya Agrolika Reksa",
+    page_title="Sistem Prediksi Volume Limbah B3 - PT Surya Agrolika Reksa",
     page_icon="🏭",
     layout="wide",
     initial_sidebar_state="expanded"
