@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 
 # ─── KONFIGURASI HALAMAN ─────────────────────────────────────
 st.set_page_config(
-    page_title="Sistem Prediksi Limbah B3 - PT Sawit",
+    page_title="Sistem Prediksi Limbah B3 - PT Surya Agrolika Reksa",
     page_icon="🏭",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -240,7 +240,7 @@ def latih_model(df):
 # ─── SIDEBAR ─────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### Sistem Prediksi Limbah B3")
-    st.markdown("**PT Sawit** · Teknik Informatika")
+    st.markdown("**PT Surya Agrolika Reksa**")
     st.markdown("---")
 
     menu = st.radio(
@@ -260,7 +260,7 @@ with st.sidebar:
 # ─── BERANDA ─────────────────────────────────────────────────
 if menu == "Beranda":
     st.markdown('<div class="page-title">Sistem Prediksi Volume Limbah B3</div>', unsafe_allow_html=True)
-    st.markdown('<div class="page-sub">PT Sawit — Upload data untuk memulai analisis dan prediksi</div>', unsafe_allow_html=True)
+    st.markdown('<div class="page-sub">PT Surya Agrolika Reksa — Upload data untuk memulai analisis dan prediksi</div>', unsafe_allow_html=True)
 
     uploaded = st.file_uploader(
         "Upload File Data (CSV)",
@@ -580,7 +580,7 @@ elif menu == "Tentang Sistem":
     <div class="info-box">
         Sistem ini dikembangkan sebagai bagian dari penelitian skripsi Teknik Informatika
         dengan judul <strong>"Prediksi Volume Limbah B3 Menggunakan Algoritma Random Forest"</strong>
-        pada operasional pabrik kelapa sawit PT Sawit.
+        pada operasional pabrik kelapa sawit PT Surya Agrolika Reksa.
     </div>
     """, unsafe_allow_html=True)
 
