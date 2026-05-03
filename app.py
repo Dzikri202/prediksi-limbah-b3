@@ -24,152 +24,184 @@ st.set_page_config(
 # ─── CSS KUSTOM ──────────────────────────────────────────────
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
     html, body, [class*="css"] {
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     .stApp {
-        background-color: #0f1117;
-        color: #e8e8e8;
+        background-color: #eef2f7;
+        color: #1a2540;
     }
 
     section[data-testid="stSidebar"] {
-        background-color: #161b22;
-        border-right: 1px solid #21262d;
+        background: linear-gradient(160deg, #0a2351 0%, #1a4080 100%);
+        border-right: none;
+        box-shadow: 4px 0 24px rgba(10,35,81,0.18);
+    }
+
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] div {
+        color: #d4e2f8 !important;
+    }
+
+    section[data-testid="stSidebar"] hr {
+        border-color: rgba(255,255,255,0.12) !important;
+    }
+
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        max-width: 1200px;
     }
 
     .metric-card {
-        background: #161b22;
-        border: 1px solid #21262d;
-        border-radius: 8px;
-        padding: 20px 24px;
-        margin-bottom: 12px;
+        background: #ffffff;
+        border: 1px solid #d5e3f0;
+        border-radius: 14px;
+        padding: 22px 26px;
+        margin-bottom: 14px;
+        box-shadow: 0 2px 10px rgba(10,35,81,0.07);
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .metric-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(10,35,81,0.12);
     }
 
     .metric-label {
         font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
+        font-weight: 700;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: #7d8590;
-        margin-bottom: 6px;
+        color: #7a92b8;
+        margin-bottom: 8px;
     }
 
     .metric-value {
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 28px;
-        font-weight: 500;
-        color: #e6edf3;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 600;
+        color: #0a2351;
         line-height: 1.2;
     }
 
     .metric-sub {
         font-size: 12px;
-        color: #7d8590;
-        margin-top: 4px;
+        color: #9aaece;
+        margin-top: 6px;
+        font-weight: 500;
     }
 
-    .metric-good { border-left: 3px solid #3fb950; }
-    .metric-warn { border-left: 3px solid #d29922; }
-    .metric-info { border-left: 3px solid #388bfd; }
-    .metric-muted { border-left: 3px solid #484f58; }
+    .metric-good  { border-left: 5px solid #0a9e70; }
+    .metric-warn  { border-left: 5px solid #e09b0a; }
+    .metric-info  { border-left: 5px solid #1a6fc4; }
+    .metric-muted { border-left: 5px solid #9aaece; }
 
     .section-header {
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.10em;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: #7d8590;
-        border-bottom: 1px solid #21262d;
-        padding-bottom: 8px;
-        margin: 28px 0 16px 0;
+        color: #7a92b8;
+        border-bottom: 2px solid #d5e3f0;
+        padding-bottom: 10px;
+        margin: 36px 0 18px 0;
     }
 
     .page-title {
-        font-size: 24px;
-        font-weight: 700;
-        color: #e6edf3;
+        font-size: 30px;
+        font-weight: 800;
+        color: #0a2351;
         letter-spacing: -0.02em;
+        line-height: 1.2;
     }
 
     .page-sub {
-        font-size: 14px;
-        color: #7d8590;
-        margin-top: 4px;
-        margin-bottom: 24px;
+        font-size: 15px;
+        color: #7a92b8;
+        margin-top: 6px;
+        margin-bottom: 28px;
+        font-weight: 400;
     }
 
     .badge {
         display: inline-block;
-        font-size: 11px;
-        font-weight: 600;
-        padding: 3px 10px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 5px 14px;
         border-radius: 20px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.06em;
     }
 
-    .badge-green { background: #1a3a1e; color: #3fb950; border: 1px solid #3fb950; }
-    .badge-yellow { background: #2d2008; color: #d29922; border: 1px solid #d29922; }
-    .badge-red { background: #3d1a1a; color: #f85149; border: 1px solid #f85149; }
+    .badge-green  { background: #e6f9f3; color: #0a9e70; border: 1.5px solid #0a9e70; }
+    .badge-yellow { background: #fef9e6; color: #b77f0a; border: 1.5px solid #e09b0a; }
+    .badge-red    { background: #fdecea; color: #c0392b; border: 1.5px solid #e74c3c; }
 
     .info-box {
-        background: #161b22;
-        border: 1px solid #21262d;
-        border-left: 3px solid #388bfd;
-        border-radius: 6px;
-        padding: 14px 16px;
-        font-size: 13px;
-        color: #adbac7;
+        background: #e8f1fc;
+        border: 1px solid #b3cef5;
+        border-left: 5px solid #1a6fc4;
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-size: 14px;
+        color: #2c4a7c;
         margin: 12px 0;
+        font-weight: 500;
     }
 
     div[data-testid="stDataFrame"] {
-        border: 1px solid #21262d;
-        border-radius: 8px;
+        border: 1px solid #d5e3f0;
+        border-radius: 10px;
+        overflow: hidden;
     }
 
     .stButton > button {
-        background: #238636;
+        background: linear-gradient(135deg, #1a4080 0%, #1a6fc4 100%);
         color: #ffffff;
-        border: 1px solid #2ea043;
-        border-radius: 6px;
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 600;
-        font-size: 13px;
-        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 10px 24px;
         width: 100%;
-        transition: background 0.2s;
+        transition: opacity 0.2s, transform 0.15s;
+        box-shadow: 0 2px 8px rgba(26,64,128,0.3);
     }
 
     .stButton > button:hover {
-        background: #2ea043;
+        opacity: 0.9;
+        transform: translateY(-1px);
     }
 
     .stSelectbox label, .stSlider label, .stNumberInput label {
         font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
+        font-weight: 700;
+        letter-spacing: 0.10em;
         text-transform: uppercase;
-        color: #7d8590;
+        color: #7a92b8;
     }
 
-    hr { border-color: #21262d; }
+    hr { border-color: #d5e3f0; }
 </style>
 """, unsafe_allow_html=True)
 
 # ─── FUNGSI BANTUAN ───────────────────────────────────────────
 def set_plot_style(fig, ax_list):
-    fig.patch.set_facecolor('#0f1117')
+    fig.patch.set_facecolor('#ffffff')
     for ax in ax_list:
-        ax.set_facecolor('#161b22')
-        ax.tick_params(colors='#7d8590', labelsize=9)
-        ax.xaxis.label.set_color('#7d8590')
-        ax.yaxis.label.set_color('#7d8590')
-        ax.title.set_color('#e6edf3')
+        ax.set_facecolor('#f8fafd')
+        ax.tick_params(colors='#7a92b8', labelsize=9)
+        ax.xaxis.label.set_color('#4a6490')
+        ax.yaxis.label.set_color('#4a6490')
+        ax.title.set_color('#0a2351')
         for spine in ax.spines.values():
-            spine.set_edgecolor('#21262d')
+            spine.set_edgecolor('#d5e3f0')
     return fig
 
 @st.cache_data
@@ -315,9 +347,9 @@ elif menu == "Eksplorasi Data":
         subset = df[df['Jenis_Limbah_B3'] == jenis_pilih].sort_values('Tanggal')
         fig, ax = plt.subplots(figsize=(11, 4))
         ax.plot(subset['Tanggal'], subset['Volume_Masuk_Ton'],
-                color='#388bfd', linewidth=1.5, marker='o', markersize=4)
+                color='#1a6fc4', linewidth=1.5, marker='o', markersize=4)
         ax.fill_between(subset['Tanggal'], subset['Volume_Masuk_Ton'],
-                        alpha=0.15, color='#388bfd')
+                        alpha=0.15, color='#1a6fc4')
         ax.set_title(f'Volume Masuk - {jenis_pilih[:40]}', fontsize=12, pad=12)
         ax.set_xlabel('Tanggal')
         ax.set_ylabel('Volume (Ton)')
@@ -331,7 +363,7 @@ elif menu == "Eksplorasi Data":
 
         fig2, ax2 = plt.subplots(figsize=(11, 4))
         ax2.bar(bulanan['BulanTahun'], bulanan['Volume_Masuk_Ton'],
-                color='#3fb950', alpha=0.8, width=0.6)
+                color='#0a9e70', alpha=0.8, width=0.6)
         ax2.set_title('Total Volume Limbah B3 per Bulan', fontsize=12, pad=12)
         ax2.set_xlabel('Bulan')
         ax2.set_ylabel('Total Volume (Ton)')
@@ -397,9 +429,9 @@ elif menu == "Evaluasi Model":
         st.markdown('<div class="section-header">Aktual vs Prediksi</div>', unsafe_allow_html=True)
         fig, ax = plt.subplots(figsize=(11, 4))
         ax.plot(range(len(y_test)), y_test.values,
-                label='Aktual', color='#388bfd', linewidth=1.5, marker='o', markersize=3)
+                label='Aktual', color='#1a6fc4', linewidth=1.5, marker='o', markersize=3)
         ax.plot(range(len(y_pred)), y_pred,
-                label='Prediksi', color='#f85149', linewidth=1.5,
+                label='Prediksi', color='#e03c31', linewidth=1.5,
                 linestyle='--', marker='x', markersize=3)
         ax.set_title('Perbandingan Nilai Aktual vs Prediksi', fontsize=12, pad=12)
         ax.set_xlabel('Indeks Data Uji')
@@ -411,7 +443,7 @@ elif menu == "Evaluasi Model":
         # Scatter plot
         st.markdown('<div class="section-header">Scatter Plot</div>', unsafe_allow_html=True)
         fig2, ax2 = plt.subplots(figsize=(6, 6))
-        ax2.scatter(y_test, y_pred, alpha=0.6, color='#388bfd',
+        ax2.scatter(y_test, y_pred, alpha=0.6, color='#1a6fc4',
                     edgecolors='#21262d', linewidth=0.5, s=40)
         ax2.plot([y_test.min(), y_test.max()],
                  [y_test.min(), y_test.max()],
@@ -431,7 +463,7 @@ elif menu == "Evaluasi Model":
             importances = model.feature_importances_
             feat_imp = pd.Series(importances, index=fitur).sort_values(ascending=True)
             fig3, ax3 = plt.subplots(figsize=(6, 5))
-            ax3.barh(feat_imp.index, feat_imp.values, color='#388bfd', alpha=0.85)
+            ax3.barh(feat_imp.index, feat_imp.values, color='#1a6fc4', alpha=0.85)
             ax3.set_title('Tingkat Kepentingan Fitur', fontsize=11, pad=10)
             ax3.set_xlabel('Importance Score')
             set_plot_style(fig3, [ax3])
@@ -516,7 +548,7 @@ elif menu == "Forecasting":
             # Grafik forecasting
             st.markdown('<div class="section-header">Grafik Forecasting</div>', unsafe_allow_html=True)
             fig, ax = plt.subplots(figsize=(11, 4))
-            colors = ['#388bfd','#3fb950','#d29922','#f85149','#a371f7']
+            colors = ['#1a6fc4','#0a9e70','#e09b0a','#e03c31','#7c4dcc']
             for i, jenis in enumerate(jenis_list):
                 sub = df_fc[df_fc['Jenis_Limbah_B3'] == jenis]
                 ax.plot(sub['Tanggal'], sub['Volume_Prediksi_Ton'],
