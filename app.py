@@ -238,23 +238,31 @@ def latih_model(df):
     return model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred
 
 # ─── SIDEBAR ─────────────────────────────────────────────────
+from streamlit_option_menu import option_menu
 with st.sidebar:
     st.markdown("### Sistem Prediksi Limbah B3")
     st.markdown("**PT Surya Agrolika Reksa**")
     st.markdown("---")
 
-    menu = st.radio(
-        "Navigasi",
-        ["Beranda", "Eksplorasi Data", "Evaluasi Model",
-         "Forecasting", "Tentang Sistem"],
-        label_visibility="collapsed"
-    )
-
-    st.markdown("---")
-    st.markdown(
-        '<div style="font-size:11px;color:#484f58;">Prediksi Volume Limbah B3<br>'
-        'Menggunakan Algoritma Random Forest</div>',
-        unsafe_allow_html=True
+    # Menggunakan option_menu agar ikon muncul
+    menu = option_menu(
+        menu_title=None,  # Tidak perlu judul menu lagi
+        options=["Beranda", "Eksplorasi Data", "Evaluasi Model", "Forecasting", "Tentang Sistem"],
+        icons=["house", "search", "activity", "graph-up", "info-circle"], # Nama ikon dari Bootstrap Icons
+        menu_icon="cast", 
+        default_index=0,
+        styles={
+            "container": {"padding": "0!important", "background-color": "transparent"},
+            "icon": {"color": "#d4e2f8", "font-size": "18px"}, 
+            "nav-link": {
+                "font-size": "14px", 
+                "text-align": "left", 
+                "margin": "0px", 
+                "color": "#d4e2f8",
+                "--hover-color": "rgba(255,255,255,0.1)"
+            },
+            "nav-link-selected": {"background-color": "rgba(255,255,255,0.2)"},
+        }
     )
 
 # ─── BERANDA ─────────────────────────────────────────────────
