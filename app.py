@@ -53,9 +53,13 @@ st.markdown("""
     }
 
     .block-container {
-        padding-top: 2rem;
+        padding-top: 4rem !important;
         padding-bottom: 2rem;
         max-width: 1200px;
+    }
+    header[data-testid="stHeader"] {
+        background: #eef2f7;
+        border-bottom: 1px solid #d5e3f0;
     }
 
     .metric-card {
@@ -239,8 +243,16 @@ def latih_model(df):
 
 # ─── SIDEBAR ─────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### Sistem Prediksi Limbah B3")
-    st.markdown("**PT Surya Agrolika Reksa**")
+    st.markdown("""
+    <div style="padding: 8px 0 4px 0;">
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.05em; color:#ffffff; margin-bottom:4px;">
+            SISTEM PREDIKSI LIMBAH B3
+        </div>
+        <div style="font-size:12px; font-weight:500; color:#a0bcdf;">
+            PT Surya Agrolika Reksa
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("---")
 
     menu = st.radio(
