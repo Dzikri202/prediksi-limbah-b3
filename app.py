@@ -155,18 +155,6 @@ st.markdown("""
         font-weight: 500;
     }
 
-    .warn-box {
-        background: #fef9e6;
-        border: 1px solid #f5d78a;
-        border-left: 5px solid #e09b0a;
-        border-radius: 10px;
-        padding: 14px 18px;
-        font-size: 14px;
-        color: #6b4e0a;
-        margin: 12px 0;
-        font-weight: 500;
-    }
-
     div[data-testid="stDataFrame"] {
         border: 1px solid #d5e3f0;
         border-radius: 10px;
@@ -207,17 +195,13 @@ st.markdown("""
 # ─── FUNGSI UTAMA LOAD MODEL (.JOBLIB) ───────────────────────
 @st.cache_resource
 def muat_model_dan_encoder():
-    """
-    Fungsi untuk memuat berkas biner model dan komponen encoder
-    yang di-download dari pengerjaan Google Colab baru Anda.
-    """
     model     = joblib.load('model_rf_limbah.joblib')
     le_jenis  = joblib.load('encoder_jenis_limbah.joblib')
     le_sumber = joblib.load('encoder_sumber.joblib')
     
-    # Menegakkan nama dan susunan fitur agar sinkron dengan model
+    # Disesuaikan pas dengan nama kolom saat ditraining pada Colab baru Anda
     fitur = ['Bulan', 'Tahun', 'Kuartal', 'Hari_dalam_Bulan',
-             'Jenis_Encoded', 'Sumber_Encoded', 'Sisa_di_TPS_Ton_lag1']
+             'Jenis_Encoded', 'Sumber_Encoded', 'Sisa_di_TPS_Ton']
     
     return model, le_jenis, le_sumber, fitur
 
@@ -384,7 +368,7 @@ elif menu == "Evaluasi Model":
         st.markdown("""
         <div class="info-box">
             <strong>Informasi Sistem:</strong> Model dimuat langsung dari berkas fisik <code>model_rf_limbah.joblib</code>. 
-            Fitur lag-1 mendeteksi sisa TPS periode sebelumnya secara dinamis dari data yang Anda masukkan.
+            Fitur waktu dan sisa TPS diproses secara dinamis menyelaraskan struktur latih Colab.
         </div>
         """, unsafe_allow_html=True)
 
@@ -392,15 +376,8 @@ elif menu == "Evaluasi Model":
             with st.spinner("Memuat file model dan komponen pendukung..."):
                 model, le_jenis, le_sumber, fitur = muat_model_dan_encoder()
                 
-                # --- PRA-PROSES DATA SINKRON DENGAN COLAB ---
                 df_clean = df.copy()
                 df_clean = df_clean.sort_values(['Jenis_Limbah_B3', 'Tanggal']).reset_index(drop=True)
-                
-                # Pembuatan fitur lag-1 sisa TPS
-                df_clean['Sisa_di_TPS_Ton_lag1'] = df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].shift(1)
-                df_clean['Sisa_di_TPS_Ton_lag1'] = df_clean['Sisa_di_TPS_Ton_lag1'].fillna(
-                    df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].transform('mean')
-                )
                 
                 # Ekstraksi fitur waktu
                 df_clean['Bulan']            = df_clean['Tanggal'].dt.month
@@ -408,21 +385,19 @@ elif menu == "Evaluasi Model":
                 df_clean['Kuartal']          = df_clean['Tanggal'].dt.quarter
                 df_clean['Hari_dalam_Bulan'] = df_clean['Tanggal'].dt.day
                 
-                # Melakukan transformasi data string menggunakan encoder joblib
+                # Melakukan transformasi data menggunakan encoder joblib
                 df_clean['Jenis_Encoded']    = le_jenis.transform(df_clean['Jenis_Limbah_B3'])
                 df_clean['Sumber_Encoded']   = le_sumber.transform(df_clean['Sumber'])
                 
-                # Menyimpan sisa terakhir untuk forecasting
                 sisa_terakhir = df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].last()
                 
                 X_eval = df_clean[fitur]
                 y_eval = df_clean['Volume_Masuk_Ton']
                 
-                # Mengisolasi porsi 20% data uji untuk menyimulasikan grafik evaluasi
                 _, X_test, _, y_test = train_test_split(X_eval, y_eval, test_size=0.2, random_state=42)
                 y_pred = model.predict(X_test)
 
-                # Amankan komponen penting ke dalam session state
+                # Amankan ke session state
                 st.session_state['model']         = model
                 st.session_state['le_jenis']      = le_jenis
                 st.session_state['le_sumber']     = le_sumber
@@ -464,8 +439,7 @@ elif menu == "Evaluasi Model":
             st.pyplot(fig)
 
         except Exception as e:
-            st.error(f"Gagal memuat model! Pesan kesalahan: {str(e)}")
-            st.warning("Pastikan file 'model_rf_limbah.joblib', 'encoder_jenis_limbah.joblib', dan 'encoder_sumber.joblib' hasil download dari Google Colab baru sudah di-upload ke repository GitHub Anda (taruh satu folder dengan app.py).")
+            st.error(f"Gagal memetakan model! Pesan kesalahan: {str(e)}")
 
 # ─── FORECASTING ─────────────────────────────────────────────
 elif menu == "Forecasting":
@@ -511,7 +485,7 @@ elif menu == "Forecasting":
                         'Tahun'           : tgl.year,
                         'Kuartal'         : (tgl.month - 1) // 3 + 1,
                         'Hari_dalam_Bulan': 15,
-                        'Sisa_di_TPS_Ton_lag1' : sisa_current[jenis],
+                        'Sisa_di_TPS_Ton' : sisa_current[jenis],
                     })
 
             df_fc = pd.DataFrame(rows)
@@ -559,16 +533,6 @@ elif menu == "Tentang Sistem":
 
     st.markdown("""
     <div class="info-box">
-        Sistem ini dikembangkan menggunakan berkas biner (.joblib) hasil ekstraksi kalkulasi dari Google Colab.
-        Pendekatan ini menjamin metrik laporan akurasi di draf naskah skripsi Anda sinkron 100% dengan apa yang ditampilkan pada aplikasi web.
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown('<div class="section-header">Spesifikasi Model Terbaca</div>', unsafe_allow_html=True)
-    st.markdown("""
-    <div class="metric-card metric-info">
-        <div class="metric-label">Arsitektur Terbaca</div>
-        <div class="metric-value" style="font-size:18px;">Random Forest Regressor (.joblib)</div>
-        <div class="metric-sub">Pemuatan Instan Tanpa Beban Training Ulang di Web Cloud</div>
+        Sistem ini disinkronisasikan langsung dengan struktur latih model fisik (.joblib) dari Google Colab terbaru Anda untuk menjaga akurasi skripsi tetap konsisten.
     </div>
     """, unsafe_allow_html=True)
