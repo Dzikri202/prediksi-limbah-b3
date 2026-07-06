@@ -18,7 +18,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ─── CSS KUSTOM VIA ST.MARKDOWN ────────────────AAAAAAAA──────
+# ─── CSS KUSTOM VIA ST.MARKDOWN ──────────────────────────────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -199,9 +199,13 @@ def muat_model_dan_encoder():
     le_jenis  = joblib.load('encoder_jenis_limbah.joblib')
     le_sumber = joblib.load('encoder_sumber.joblib')
     
-    fitur = ['Bulan', 'Tahun', 'Kuartal', 'Hari_dalam_Bulan',
-             'Jenis_Encoded', 'Sumber_Encoded', 'Sisa_di_TPS_Ton']
-    
+    # Deteksi otomatis daftar kolom yang tertanam di model joblib Anda
+    try:
+        fitur = list(model.feature_names_in_)
+    except:
+        fitur = ['Bulan', 'Tahun', 'Kuartal', 'Hari_dalam_Bulan',
+                 'Jenis_Encoded', 'Sumber_Encoded', 'Sisa_di_TPS_Ton_lag1']
+                 
     return model, le_jenis, le_sumber, fitur
 
 def set_plot_style(fig, ax_list):
@@ -220,16 +224,20 @@ def set_plot_style(fig, ax_list):
 def muat_data(file):
     df = pd.read_csv(file)
     
-    # PERBAIKAN: Deteksi dan hapus baris yang benar-benar kosong agar tidak berubah jadi string 'nan'
+    # BERSIHKAN BARIS NAN KOSONG TOTAL
     df = df.dropna(subset=['Tanggal', 'Jenis_Limbah_B3', 'Sumber'])
-    
-    # Ubah format kolom Tanggal ke datetime
     df['Tanggal'] = pd.to_datetime(df['Tanggal'])
     
-    # PEMBERSIHAN DATA DARI SPASI BERLEBIH
+    # BERSIHKAN SPASI KATEGORI
     df['Jenis_Limbah_B3'] = df['Jenis_Limbah_B3'].astype(str).str.strip()
     df['Sumber'] = df['Sumber'].astype(str).str.strip()
     
+    # AUTOMATIC PROTECTION SAFETY: Sediakan kedua versi kolom sisa agar model tidak komplain kolom hilang
+    if 'Sisa_di_TPS_Ton' in df.columns and 'Sisa_di_TPS_Ton_lag1' not in df.columns:
+        df['Sisa_di_TPS_Ton_lag1'] = df['Sisa_di_TPS_Ton']
+    elif 'Sisa_di_TPS_Ton_lag1' in df.columns and 'Sisa_di_TPS_Ton' not in df.columns:
+        df['Sisa_di_TPS_Ton'] = df['Sisa_di_TPS_Ton_lag1']
+        
     return df
 
 # ─── SIDEBAR NAVIGASI ─────────────────────────────────────────
@@ -402,7 +410,9 @@ elif menu == "Evaluasi Model":
                 df_clean['Jenis_Encoded']    = le_jenis.transform(df_clean['Jenis_Limbah_B3'])
                 df_clean['Sumber_Encoded']   = le_sumber.transform(df_clean['Sumber'])
                 
-                sisa_terakhir = df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].last()
+                # Ambil sisa terakhir dinamis (bisa mendeteksi kolom lag maupun non-lag)
+                kolom_sisa_aktif = 'Sisa_di_TPS_Ton_lag1' if 'Sisa_di_TPS_Ton_lag1' in df_clean.columns else 'Sisa_di_TPS_Ton'
+                sisa_terakhir = df_clean.groupby('Jenis_Limbah_B3')[kolom_sisa_aktif].last()
                 
                 X_eval = df_clean[fitur]
                 y_eval = df_clean['Volume_Masuk_Ton']
@@ -416,6 +426,7 @@ elif menu == "Evaluasi Model":
                 st.session_state['le_sumber']     = le_sumber
                 st.session_state['fitur']         = fitur
                 st.session_state['sisa_terakhir'] = sisa_terakhir
+                st.session_state['kolom_sisa']    = kolom_sisa_aktif
 
             # --- KALKULASI UKURAN AKURASI ---
             mae  = mean_absolute_error(y_test, y_pred)
@@ -470,6 +481,7 @@ elif menu == "Forecasting":
         le_sumber     = st.session_state['le_sumber']
         fitur         = st.session_state['fitur']
         sisa_terakhir = st.session_state['sisa_terakhir']
+        kolom_sisa    = st.session_state['kolom_sisa']
 
         col_set, _ = st.columns([1, 2])
         with col_set:
@@ -498,10 +510,17 @@ elif menu == "Forecasting":
                         'Tahun'           : tgl.year,
                         'Kuartal'         : (tgl.month - 1) // 3 + 1,
                         'Hari_dalam_Bulan': 15,
-                        'Sisa_di_TPS_Ton' : sisa_current[jenis],
+                        kolom_sisa        : sisa_current[jenis],
                     })
 
             df_fc = pd.DataFrame(rows)
+            
+            # Pengaman tambahan penamaan kolom saat diprediksi
+            if 'Sisa_di_TPS_Ton' in fitur and 'Sisa_di_TPS_Ton' not in df_fc.columns:
+                df_fc['Sisa_di_TPS_Ton'] = df_fc[kolom_sisa]
+            if 'Sisa_di_TPS_Ton_lag1' in fitur and 'Sisa_di_TPS_Ton_lag1' not in df_fc.columns:
+                df_fc['Sisa_di_TPS_Ton_lag1'] = df_fc[kolom_sisa]
+
             df_fc['Jenis_Encoded']  = le_jenis.transform(df_fc['Jenis_Limbah_B3'])
             df_fc['Sumber_Encoded'] = le_sumber.transform(df_fc['Sumber'])
             df_fc['Volume_Prediksi_Ton'] = model.predict(df_fc[fitur]).round(4)
