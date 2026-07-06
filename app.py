@@ -199,7 +199,6 @@ def muat_model_dan_encoder():
     le_jenis  = joblib.load('encoder_jenis_limbah.joblib')
     le_sumber = joblib.load('encoder_sumber.joblib')
     
-    # Disesuaikan pas dengan nama kolom saat ditraining pada Colab baru Anda
     fitur = ['Bulan', 'Tahun', 'Kuartal', 'Hari_dalam_Bulan',
              'Jenis_Encoded', 'Sumber_Encoded', 'Sisa_di_TPS_Ton']
     
@@ -220,6 +219,11 @@ def set_plot_style(fig, ax_list):
 @st.cache_data
 def muat_data(file):
     df = pd.read_csv(file, parse_dates=['Tanggal'])
+    # PEMBERSIHAN DATA DARI SPASI BERLEBIH (FIX ERROR UNSEEN LABELS)
+    if 'Jenis_Limbah_B3' in df.columns:
+        df['Jenis_Limbah_B3'] = df['Jenis_Limbah_B3'].astype(str).str.strip()
+    if 'Sumber' in df.columns:
+        df['Sumber'] = df['Sumber'].astype(str).str.strip()
     return df
 
 # ─── SIDEBAR NAVIGASI ─────────────────────────────────────────
@@ -385,7 +389,10 @@ elif menu == "Evaluasi Model":
                 df_clean['Kuartal']          = df_clean['Tanggal'].dt.quarter
                 df_clean['Hari_dalam_Bulan'] = df_clean['Tanggal'].dt.day
                 
-                # Melakukan transformasi data menggunakan encoder joblib
+                # Mengatasi spasi tidak sengaja pada encoder
+                le_jenis.classes_  = np.array([c.strip() for c in le_jenis.classes_])
+                le_sumber.classes_ = np.array([c.strip() for c in le_sumber.classes_])
+                
                 df_clean['Jenis_Encoded']    = le_jenis.transform(df_clean['Jenis_Limbah_B3'])
                 df_clean['Sumber_Encoded']   = le_sumber.transform(df_clean['Sumber'])
                 
