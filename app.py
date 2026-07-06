@@ -18,7 +18,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ─── CSS KUSTOM VIA ST.MARKDOWN ──────────────────────────────
+# ─── CSS KUSTOM VIA ST.MARKDOWN ────────────────AAAAAAAA──────
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -218,12 +218,18 @@ def set_plot_style(fig, ax_list):
 
 @st.cache_data
 def muat_data(file):
-    df = pd.read_csv(file, parse_dates=['Tanggal'])
-    # PEMBERSIHAN DATA DARI SPASI BERLEBIH (FIX ERROR UNSEEN LABELS)
-    if 'Jenis_Limbah_B3' in df.columns:
-        df['Jenis_Limbah_B3'] = df['Jenis_Limbah_B3'].astype(str).str.strip()
-    if 'Sumber' in df.columns:
-        df['Sumber'] = df['Sumber'].astype(str).str.strip()
+    df = pd.read_csv(file)
+    
+    # PERBAIKAN: Deteksi dan hapus baris yang benar-benar kosong agar tidak berubah jadi string 'nan'
+    df = df.dropna(subset=['Tanggal', 'Jenis_Limbah_B3', 'Sumber'])
+    
+    # Ubah format kolom Tanggal ke datetime
+    df['Tanggal'] = pd.to_datetime(df['Tanggal'])
+    
+    # PEMBERSIHAN DATA DARI SPASI BERLEBIH
+    df['Jenis_Limbah_B3'] = df['Jenis_Limbah_B3'].astype(str).str.strip()
+    df['Sumber'] = df['Sumber'].astype(str).str.strip()
+    
     return df
 
 # ─── SIDEBAR NAVIGASI ─────────────────────────────────────────
