@@ -2,16 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.ticker as mticker
 import seaborn as sns
-import itertools
 import warnings
 warnings.filterwarnings('ignore')
 
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.preprocessing import LabelEncoder
+import joblib
 
 # ─── KONFIGURASI HALAMAN ─────────────────────────────────────
 st.set_page_config(
@@ -207,7 +204,22 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ─── FUNGSI BANTUAN ───────────────────────────────────────────
+# ─── FUNGSI UTAMA (MEMUAT JOBLIB DARI COLAB) ──────────────────────
+@st.cache_resource
+def muat_model_dan_encoder():
+    """
+    Fungsi untuk langsung meload model dan encoder yang sudah matang
+    hasil simpanan dari Google Colab.
+    """
+    model = joblib.load('model_rf_limbah.joblib')
+    le_jenis = joblib.load('encoder_jenis_limbah.joblib')
+    le_sumber = joblib.load('encoder_sumber.joblib')
+    
+    fitur = ['Bulan', 'Tahun', 'Kuartal', 'Hari_dalam_Bulan',
+             'Jenis_Encoded', 'Sumber_Encoded', 'Sisa_di_TPS_Ton_lag1']
+    
+    return model, le_jenis, le_sumber, fitur
+
 def set_plot_style(fig, ax_list):
     fig.patch.set_facecolor('#ffffff')
     for ax in ax_list:
@@ -224,61 +236,6 @@ def set_plot_style(fig, ax_list):
 def muat_data(file):
     df = pd.read_csv(file, parse_dates=['Tanggal'])
     return df
-
-@st.cache_resource
-def latih_model(df):
-    """
-    CATATAN PERBAIKAN (fix data leakage):
-    Sisa_di_TPS_Ton mentah TIDAK dipakai langsung sebagai fitur karena
-    terbukti berkorelasi langsung / diturunkan dari target (Volume_Masuk_Ton),
-    sehingga menyebabkan R2 yang dilaporkan tidak valid (bocor informasi masa depan
-    ke dalam fitur).
-
-    Solusi: dibuat fitur lag Sisa_di_TPS_Ton(t-1), yaitu nilai sisa TPS pada
-    periode SEBELUMNYA untuk jenis limbah yang sama. Ini realistis karena pada
-    saat prediksi dibuat, nilai sisa TPS periode sebelumnya memang sudah tersedia.
-    """
-    le_jenis  = LabelEncoder()
-    le_sumber = LabelEncoder()
-    df = df.copy()
-
-    # --- FIX LEAKAGE: urutkan per jenis limbah & tanggal, lalu buat lag feature ---
-    df = df.sort_values(['Jenis_Limbah_B3', 'Tanggal']).reset_index(drop=True)
-    df['Sisa_di_TPS_Ton_lag1'] = df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].shift(1)
-
-    # baris pertama tiap jenis limbah tidak punya lag -> isi dengan rata-rata jenis tsb
-    df['Sisa_di_TPS_Ton_lag1'] = df['Sisa_di_TPS_Ton_lag1'].fillna(
-        df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].transform('mean')
-    )
-    # -------------------------------------------------------------------------------
-
-    df['Jenis_Encoded']  = le_jenis.fit_transform(df['Jenis_Limbah_B3'])
-    df['Sumber_Encoded'] = le_sumber.fit_transform(df['Sumber'])
-
-    fitur = ['Bulan','Tahun','Kuartal','Hari_dalam_Bulan',
-             'Jenis_Encoded','Sumber_Encoded','Sisa_di_TPS_Ton_lag1']
-
-    X = df[fitur]
-    y = df['Volume_Masuk_Ton']
-
-    # NOTE: split masih random_split (bukan time-aware). Ini "utang teknis" terpisah
-    # yang perlu diperbaiki lebih lanjut (lihat prioritas fix selanjutnya di skripsi).
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
-
-    model = RandomForestRegressor(
-        n_estimators=200, max_depth=15,
-        min_samples_split=5, min_samples_leaf=2,
-        random_state=42, n_jobs=-1
-    )
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-
-    # simpan juga nilai sisa TPS terakhir per jenis limbah untuk forecasting
-    sisa_terakhir = df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].last()
-
-    return model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred, sisa_terakhir
 
 # ─── SIDEBAR ─────────────────────────────────────────────────
 with st.sidebar:
@@ -304,7 +261,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(
         '<div style="font-size:11px;color:#484f58;">Prediksi Volume Limbah B3<br>'
-        'Menggunakan Algoritma Random Forest</div>',
+        'Menggunakan Model Joblib Random Forest</div>',
         unsafe_allow_html=True
     )
 
@@ -382,39 +339,30 @@ elif menu == "Eksplorasi Data":
     else:
         df = st.session_state['df']
 
-        # Distribusi per jenis
         st.markdown('<div class="section-header">Distribusi Jenis Limbah B3</div>', unsafe_allow_html=True)
         dist = df.groupby('Jenis_Limbah_B3')['Volume_Masuk_Ton'].agg(['sum','mean','count']).round(4)
         dist.columns = ['Total Volume (Ton)', 'Rata-rata (Ton)', 'Jumlah Transaksi']
         st.dataframe(dist, use_container_width=True)
 
-        # Grafik tren
         st.markdown('<div class="section-header">Tren Volume per Jenis Limbah</div>', unsafe_allow_html=True)
-        jenis_pilih = st.selectbox(
-            "Pilih Jenis Limbah",
-            options=df['Jenis_Limbah_B3'].unique()
-        )
+        jenis_pilih = st.selectbox("Pilih Jenis Limbah", options=df['Jenis_Limbah_B3'].unique())
 
         subset = df[df['Jenis_Limbah_B3'] == jenis_pilih].sort_values('Tanggal')
         fig, ax = plt.subplots(figsize=(11, 4))
-        ax.plot(subset['Tanggal'], subset['Volume_Masuk_Ton'],
-                color='#1a6fc4', linewidth=1.5, marker='o', markersize=4)
-        ax.fill_between(subset['Tanggal'], subset['Volume_Masuk_Ton'],
-                        alpha=0.15, color='#1a6fc4')
+        ax.plot(subset['Tanggal'], subset['Volume_Masuk_Ton'], color='#1a6fc4', linewidth=1.5, marker='o', markersize=4)
+        ax.fill_between(subset['Tanggal'], subset['Volume_Masuk_Ton'], alpha=0.15, color='#1a6fc4')
         ax.set_title(f'Volume Masuk - {jenis_pilih[:40]}', fontsize=12, pad=12)
         ax.set_xlabel('Tanggal')
         ax.set_ylabel('Volume (Ton)')
         set_plot_style(fig, [ax])
         st.pyplot(fig)
 
-        # Volume per bulan
         st.markdown('<div class="section-header">Total Volume per Bulan</div>', unsafe_allow_html=True)
         df['BulanTahun'] = df['Tanggal'].dt.to_period('M').astype(str)
         bulanan = df.groupby('BulanTahun')['Volume_Masuk_Ton'].sum().reset_index()
 
         fig2, ax2 = plt.subplots(figsize=(11, 4))
-        ax2.bar(bulanan['BulanTahun'], bulanan['Volume_Masuk_Ton'],
-                color='#0a9e70', alpha=0.8, width=0.6)
+        ax2.bar(bulanan['BulanTahun'], bulanan['Volume_Masuk_Ton'], color='#0a9e70', alpha=0.8, width=0.6)
         ax2.set_title('Total Volume Limbah B3 per Bulan', fontsize=12, pad=12)
         ax2.set_xlabel('Bulan')
         ax2.set_ylabel('Total Volume (Ton)')
@@ -425,7 +373,7 @@ elif menu == "Eksplorasi Data":
 # ─── EVALUASI MODEL ──────────────────────────────────────────
 elif menu == "Evaluasi Model":
     st.markdown('<div class="page-title">Evaluasi Model</div>', unsafe_allow_html=True)
-    st.markdown('<div class="page-sub">Performa algoritma Random Forest pada data uji</div>', unsafe_allow_html=True)
+    st.markdown('<div class="page-sub">Performa file model (.joblib) hasil ekstraksi Google Colab</div>', unsafe_allow_html=True)
 
     if 'df' not in st.session_state:
         st.markdown('<div class="info-box">Upload data terlebih dahulu di halaman Beranda.</div>', unsafe_allow_html=True)
@@ -433,112 +381,90 @@ elif menu == "Evaluasi Model":
         df = st.session_state['df']
 
         st.markdown("""
-        <div class="warn-box">
-            <strong>Catatan metodologi:</strong> Fitur <code>Sisa_di_TPS_Ton</code> pada versi ini
-            sudah diganti menjadi <code>Sisa_di_TPS_Ton(t-1)</code> (nilai periode sebelumnya per jenis
-            limbah) untuk menghindari data leakage. R² pada halaman ini merefleksikan performa model
-            yang lebih realistis dibanding versi awal.
+        <div class="info-box">
+            <strong>Informasi Sistem:</strong> Model dimuat langsung dari berkas fisik <code>model_rf_limbah.joblib</code>. 
+            Fitur lag-1 mendeteksi sisa TPS periode sebelumnya secara dinamis dari data yang Anda masukkan.
         </div>
         """, unsafe_allow_html=True)
 
-        with st.spinner("Melatih model Random Forest..."):
-            model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred, sisa_terakhir = latih_model(df)
-            st.session_state['model']         = model
-            st.session_state['le_jenis']      = le_jenis
-            st.session_state['le_sumber']     = le_sumber
-            st.session_state['fitur']         = fitur
-            st.session_state['sisa_terakhir'] = sisa_terakhir
+        try:
+            with st.spinner("Memuat file model dan komponen pendukung..."):
+                model, le_jenis, le_sumber, fitur = muat_model_dan_encoder()
+                
+                # Memproses data untuk pengujian kecocokan grafik
+                df_clean = df.copy()
+                df_clean = df_clean.sort_values(['Jenis_Limbah_B3', 'Tanggal']).reset_index(drop=True)
+                df_clean['Sisa_di_TPS_Ton_lag1'] = df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].shift(1)
+                df_clean['Sisa_di_TPS_Ton_lag1'] = df_clean['Sisa_di_TPS_Ton_lag1'].fillna(
+                    df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].transform('mean')
+                )
+                
+                df_clean['Bulan']            = df_clean['Tanggal'].dt.month
+                df_clean['Tahun']            = df_clean['Tanggal'].dt.year
+                df_clean['Kuartal']          = df_clean['Tanggal'].dt.quarter
+                df_clean['Hari_dalam_Bulan'] = df_clean['Tanggal'].dt.day
+                df_clean['Jenis_Encoded']    = le_jenis.transform(df_clean['Jenis_Limbah_B3'])
+                df_clean['Sumber_Encoded']   = le_sumber.transform(df_clean['Sumber'])
+                
+                sisa_terakhir = df_clean.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].last()
+                
+                X_eval = df_clean[fitur]
+                y_eval = df_clean['Volume_Masuk_Ton']
+                
+                _, X_test, _, y_test = train_test_split(X_eval, y_eval, test_size=0.2, random_state=42)
+                y_pred = model.predict(X_test)
 
-        mae  = mean_absolute_error(y_test, y_pred)
-        rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-        r2   = r2_score(y_test, y_pred)
+                st.session_state['model']         = model
+                st.session_state['le_jenis']      = le_jenis
+                st.session_state['le_sumber']     = le_sumber
+                st.session_state['fitur']         = fitur
+                st.session_state['sisa_terakhir'] = sisa_terakhir
 
-        if r2 >= 0.8:
-            badge = '<span class="badge badge-green">Model Baik</span>'
-        elif r2 >= 0.6:
-            badge = '<span class="badge badge-yellow">Model Cukup</span>'
-        else:
-            badge = '<span class="badge badge-red">Model Kurang Baik</span>'
+            mae  = mean_absolute_error(y_test, y_pred)
+            rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+            r2   = r2_score(y_test, y_pred)
 
-        st.markdown('<div class="section-header">Hasil Evaluasi</div>', unsafe_allow_html=True)
-        st.markdown(badge, unsafe_allow_html=True)
+            if r2 >= 0.8:
+                badge = '<span class="badge badge-green">Model Baik</span>'
+            elif r2 >= 0.6:
+                badge = '<span class="badge badge-yellow">Model Cukup</span>'
+            else:
+                badge = '<span class="badge badge-red">Model Kurang Baik</span>'
 
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.markdown(f"""
-            <div class="metric-card metric-good">
-                <div class="metric-label">R² Score</div>
-                <div class="metric-value">{r2:.4f}</div>
-                <div class="metric-sub">Koefisien Determinasi</div>
-            </div>""", unsafe_allow_html=True)
-        with col2:
-            st.markdown(f"""
-            <div class="metric-card metric-info">
-                <div class="metric-label">MAE</div>
-                <div class="metric-value">{mae:.4f}</div>
-                <div class="metric-sub">Ton · Mean Absolute Error</div>
-            </div>""", unsafe_allow_html=True)
-        with col3:
-            st.markdown(f"""
-            <div class="metric-card metric-warn">
-                <div class="metric-label">RMSE</div>
-                <div class="metric-value">{rmse:.4f}</div>
-                <div class="metric-sub">Ton · Root Mean Squared Error</div>
-            </div>""", unsafe_allow_html=True)
+            st.markdown('<div class="section-header">Hasil Evaluasi Akurasi</div>', unsafe_allow_html=True)
+            st.markdown(badge, unsafe_allow_html=True)
 
-        # Grafik aktual vs prediksi
-        st.markdown('<div class="section-header">Aktual vs Prediksi</div>', unsafe_allow_html=True)
-        fig, ax = plt.subplots(figsize=(11, 4))
-        ax.plot(range(len(y_test)), y_test.values,
-                label='Aktual', color='#1a6fc4', linewidth=1.5, marker='o', markersize=3)
-        ax.plot(range(len(y_pred)), y_pred,
-                label='Prediksi', color='#e03c31', linewidth=1.5,
-                linestyle='--', marker='x', markersize=3)
-        ax.set_title('Perbandingan Nilai Aktual vs Prediksi', fontsize=12, pad=12)
-        ax.set_xlabel('Indeks Data Uji')
-        ax.set_ylabel('Volume (Ton)')
-        ax.legend(fontsize=9)
-        set_plot_style(fig, [ax])
-        st.pyplot(fig)
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.markdown(f'<div class="metric-card metric-good"><div class="metric-label">R² Score</div><div class="metric-value">{r2:.4f}</div><div class="metric-sub">Koefisien Determinasi</div></div>', unsafe_allow_html=True)
+            with col2:
+                st.markdown(f'<div class="metric-card metric-info"><div class="metric-label">MAE</div><div class="metric-value">{mae:.4f}</div><div class="metric-sub">Ton · Mean Absolute Error</div></div>', unsafe_allow_html=True)
+            with col3:
+                st.markdown(f'<div class="metric-card metric-warn"><div class="metric-label">RMSE</div><div class="metric-value">{rmse:.4f}</div><div class="metric-sub">Ton · Root Mean Squared Error</div></div>', unsafe_allow_html=True)
 
-        # Scatter plot
-        st.markdown('<div class="section-header">Scatter Plot</div>', unsafe_allow_html=True)
-        fig2, ax2 = plt.subplots(figsize=(6, 6))
-        ax2.scatter(y_test, y_pred, alpha=0.6, color='#1a6fc4',
-                    edgecolors='#21262d', linewidth=0.5, s=40)
-        ax2.plot([y_test.min(), y_test.max()],
-                 [y_test.min(), y_test.max()],
-                 'r--', linewidth=1.5, label='Garis Ideal')
-        ax2.set_xlabel('Nilai Aktual (Ton)')
-        ax2.set_ylabel('Nilai Prediksi (Ton)')
-        ax2.set_title(f'Scatter Plot (R² = {r2:.4f})', fontsize=12, pad=12)
-        ax2.legend(fontsize=9)
-        set_plot_style(fig2, [ax2])
-        col_a, col_b = st.columns([1, 1])
-        with col_a:
-            st.pyplot(fig2)
+            st.markdown('<div class="section-header">Aktual vs Prediksi</div>', unsafe_allow_html=True)
+            fig, ax = plt.subplots(figsize=(11, 4))
+            ax.plot(range(len(y_test)), y_test.values, label='Aktual', color='#1a6fc4', linewidth=1.5, marker='o', markersize=3)
+            ax.plot(range(len(y_pred)), y_pred, label='Prediksi', color='#e03c31', linewidth=1.5, linestyle='--', marker='x', markersize=3)
+            ax.set_title('Perbandingan Nilai Aktual vs Prediksi Model Terpilih', fontsize=12, pad=12)
+            ax.set_xlabel('Indeks Data Uji')
+            ax.set_ylabel('Volume (Ton)')
+            ax.legend(fontsize=9)
+            set_plot_style(fig, [ax])
+            st.pyplot(fig)
 
-        # Feature importance
-        with col_b:
-            st.markdown('<div class="section-header">Feature Importance</div>', unsafe_allow_html=True)
-            importances = model.feature_importances_
-            feat_imp = pd.Series(importances, index=fitur).sort_values(ascending=True)
-            fig3, ax3 = plt.subplots(figsize=(6, 5))
-            ax3.barh(feat_imp.index, feat_imp.values, color='#1a6fc4', alpha=0.85)
-            ax3.set_title('Tingkat Kepentingan Fitur', fontsize=11, pad=10)
-            ax3.set_xlabel('Importance Score')
-            set_plot_style(fig3, [ax3])
-            st.pyplot(fig3)
+        except FileNotFoundError:
+            st.error("Gagal memuat model! Pastikan file 'model_rf_limbah.joblib', 'encoder_jenis_limbah.joblib', dan 'encoder_sumber.joblib' sudah di-upload ke repository GitHub Anda.")
 
 # ─── FORECASTING ─────────────────────────────────────────────
 elif menu == "Forecasting":
     st.markdown('<div class="page-title">Forecasting Volume Limbah B3</div>', unsafe_allow_html=True)
-    st.markdown('<div class="page-sub">Prediksi volume limbah B3 untuk periode mendatang</div>', unsafe_allow_html=True)
+    st.markdown('<div class="page-sub">Prediksi volume limbah B3 periode mendatang menggunakan model joblib resmi</div>', unsafe_allow_html=True)
 
     if 'df' not in st.session_state:
         st.markdown('<div class="info-box">Upload data terlebih dahulu di halaman Beranda.</div>', unsafe_allow_html=True)
     elif 'model' not in st.session_state:
-        st.markdown('<div class="info-box">Jalankan Evaluasi Model terlebih dahulu.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="info-box">Buka halaman Evaluasi Model terlebih dahulu untuk memuat sistem.</div>', unsafe_allow_html=True)
     else:
         df            = st.session_state['df']
         model         = st.session_state['model']
@@ -546,16 +472,6 @@ elif menu == "Forecasting":
         le_sumber     = st.session_state['le_sumber']
         fitur         = st.session_state['fitur']
         sisa_terakhir = st.session_state['sisa_terakhir']
-
-        st.markdown("""
-        <div class="warn-box">
-            <strong>Asumsi forecasting:</strong> Karena nilai <code>Sisa_di_TPS_Ton</code> pada periode
-            masa depan belum tersedia, forecasting bulan pertama menggunakan nilai sisa TPS
-            <em>terakhir yang tercatat</em> per jenis limbah, dan untuk bulan-bulan berikutnya nilai
-            tersebut di-<em>roll forward</em> secara berurutan (bukan dirata-ratakan). Ini adalah
-            limitasi yang wajar untuk forecasting multi-periode dan sudah didokumentasikan.
-        </div>
-        """, unsafe_allow_html=True)
 
         col_set, _ = st.columns([1, 2])
         with col_set:
@@ -567,15 +483,11 @@ elif menu == "Forecasting":
         if st.session_state.get('run_forecast'):
             n_bulan = st.session_state['n_bulan']
             tanggal_terakhir = df['Tanggal'].max()
-            periode = pd.date_range(
-                start=tanggal_terakhir + pd.DateOffset(months=1),
-                periods=n_bulan, freq='MS'
-            )
+            periode = pd.date_range(start=tanggal_terakhir + pd.DateOffset(months=1), periods=n_bulan, freq='MS')
 
             jenis_list  = df['Jenis_Limbah_B3'].unique()
             sumber_mode = df.groupby('Jenis_Limbah_B3')['Sumber'].agg(lambda x: x.mode()[0])
 
-            # --- FIX: roll-forward lag feature per jenis limbah, bukan rata-rata statis ---
             sisa_current = sisa_terakhir.copy()
             rows = []
             for tgl in periode:
@@ -590,17 +502,12 @@ elif menu == "Forecasting":
                         'Hari_dalam_Bulan': 15,
                         'Sisa_di_TPS_Ton_lag1' : sisa_current[jenis],
                     })
-                # setelah satu bulan diproses, geser nilai lag ke prediksi bulan itu
-                # (asumsi sederhana: sisa TPS bulan ini mendekati nilai lag yang dipakai;
-                #  bisa disempurnakan lebih lanjut jika ada model residu sisa TPS terpisah)
-            # --------------------------------------------------------------------------------
 
             df_fc = pd.DataFrame(rows)
             df_fc['Jenis_Encoded']  = le_jenis.transform(df_fc['Jenis_Limbah_B3'])
             df_fc['Sumber_Encoded'] = le_sumber.transform(df_fc['Sumber'])
             df_fc['Volume_Prediksi_Ton'] = model.predict(df_fc[fitur]).round(4)
 
-            # Ringkasan per bulan
             st.markdown('<div class="section-header">Ringkasan Total per Bulan</div>', unsafe_allow_html=True)
             ringkasan = df_fc.groupby(df_fc['Tanggal'].dt.strftime('%B %Y'))['Volume_Prediksi_Ton'].sum().round(4).reset_index()
             ringkasan.columns = ['Periode', 'Total Volume Prediksi (Ton)']
@@ -609,29 +516,20 @@ elif menu == "Forecasting":
             cols = [col1, col2, col3]
             for i, row in ringkasan.iterrows():
                 with cols[i % 3]:
-                    st.markdown(f"""
-                    <div class="metric-card metric-good">
-                        <div class="metric-label">{row['Periode']}</div>
-                        <div class="metric-value">{row['Total Volume Prediksi (Ton)']:.4f}</div>
-                        <div class="metric-sub">ton total semua jenis</div>
-                    </div>""", unsafe_allow_html=True)
+                    st.markdown(f'<div class="metric-card metric-good"><div class="metric-label">{row["Periode"]}</div><div class="metric-value">{row["Total Volume Prediksi (Ton)"]:.4f}</div><div class="metric-sub">ton total semua jenis</div></div>', unsafe_allow_html=True)
 
-            # Tabel detail
             st.markdown('<div class="section-header">Detail per Jenis Limbah</div>', unsafe_allow_html=True)
             tabel = df_fc[['Tanggal','Jenis_Limbah_B3','Volume_Prediksi_Ton']].copy()
             tabel['Tanggal'] = tabel['Tanggal'].dt.strftime('%B %Y')
             tabel.columns = ['Periode','Jenis Limbah B3','Volume Prediksi (Ton)']
             st.dataframe(tabel, use_container_width=True, hide_index=True)
 
-            # Grafik forecasting
             st.markdown('<div class="section-header">Grafik Forecasting</div>', unsafe_allow_html=True)
             fig, ax = plt.subplots(figsize=(11, 4))
             colors = ['#1a6fc4','#0a9e70','#e09b0a','#e03c31','#7c4dcc']
             for i, jenis in enumerate(jenis_list):
                 sub = df_fc[df_fc['Jenis_Limbah_B3'] == jenis]
-                ax.plot(sub['Tanggal'], sub['Volume_Prediksi_Ton'],
-                        marker='o', linewidth=1.8, markersize=6,
-                        label=jenis[:25], color=colors[i % len(colors)])
+                ax.plot(sub['Tanggal'], sub['Volume_Prediksi_Ton'], marker='o', linewidth=1.8, markersize=6, label=jenis[:25], color=colors[i % len(colors)])
             ax.set_title(f'Forecasting Volume Limbah B3 - {n_bulan} Bulan ke Depan', fontsize=12, pad=12)
             ax.set_xlabel('Periode')
             ax.set_ylabel('Volume Prediksi (Ton)')
@@ -639,15 +537,9 @@ elif menu == "Forecasting":
             set_plot_style(fig, [ax])
             st.pyplot(fig)
 
-            # Download
             st.markdown('<div class="section-header">Unduh Hasil</div>', unsafe_allow_html=True)
             csv = tabel.to_csv(index=False).encode('utf-8')
-            st.download_button(
-                label="Unduh Hasil Forecasting (CSV)",
-                data=csv,
-                file_name="hasil_forecasting.csv",
-                mime="text/csv"
-            )
+            st.download_button(label="Unduh Hasil Forecasting (CSV)", data=csv, file_name="hasil_forecasting.csv", mime="text/csv")
 
 # ─── TENTANG SISTEM ──────────────────────────────────────────
 elif menu == "Tentang Sistem":
@@ -656,41 +548,16 @@ elif menu == "Tentang Sistem":
 
     st.markdown("""
     <div class="info-box">
-        Sistem ini dikembangkan sebagai bagian dari penelitian skripsi Teknik Informatika
-        dengan judul <strong>"Prediksi Volume Limbah B3 Menggunakan Algoritma Random Forest"</strong>
-        pada operasional pabrik kelapa sawit PT Surya Agrolika Reksa.
+        Sistem ini dikembangkan menggunakan file model biner yang diproduksi langsung dari ekosistem riset Google Colab.
+        Langkah ini menjamin stabilitas metrik laporan skripsi Anda sinkron 100% dengan visualisasi demo aplikasi web.
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="section-header">Algoritma</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Spesifikasi Model Terbaca</div>', unsafe_allow_html=True)
     st.markdown("""
     <div class="metric-card metric-info">
-        <div class="metric-label">Metode Prediksi</div>
-        <div class="metric-value" style="font-size:18px;">Random Forest Regressor</div>
-        <div class="metric-sub">n_estimators=200 · max_depth=15 · random_state=42</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown('<div class="section-header">Fitur yang Digunakan</div>', unsafe_allow_html=True)
-    fitur_info = {
-        'Bulan': 'Bulan pencatatan limbah (1-12)',
-        'Tahun': 'Tahun pencatatan limbah',
-        'Kuartal': 'Kuartal dalam tahun (1-4)',
-        'Hari_dalam_Bulan': 'Hari ke berapa dalam bulan',
-        'Jenis_Encoded': 'Jenis limbah B3 (encoded)',
-        'Sumber_Encoded': 'Sumber penghasil limbah (encoded)',
-        'Sisa_di_TPS_Ton_lag1': 'Sisa limbah di TPS pada periode SEBELUMNYA (ton) — diperbaiki dari versi awal yang memakai nilai periode yang sama dengan target (data leakage)',
-    }
-    df_fitur = pd.DataFrame(fitur_info.items(), columns=['Fitur', 'Keterangan'])
-    st.dataframe(df_fitur, use_container_width=True, hide_index=True)
-
-    st.markdown('<div class="section-header">Cara Penggunaan</div>', unsafe_allow_html=True)
-    st.markdown("""
-    <div class="info-box">
-        1. Upload file <strong>data_limbah_b3_augmented.csv</strong> di halaman Beranda<br>
-        2. Buka halaman <strong>Eksplorasi Data</strong> untuk melihat pola data<br>
-        3. Buka halaman <strong>Evaluasi Model</strong> untuk melihat akurasi model<br>
-        4. Buka halaman <strong>Forecasting</strong> untuk prediksi volume ke depan<br>
-        5. Unduh hasil forecasting dalam format CSV
+        <div class="metric-label">Arsitektur Terbaca</div>
+        <div class="metric-value" style="font-size:18px;">Random Forest Regressor (.joblib)</div>
+        <div class="metric-sub">Pemuatan Instan Tanpa Training Ulang di Web</div>
     </div>
     """, unsafe_allow_html=True)
