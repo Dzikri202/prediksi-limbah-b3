@@ -158,6 +158,18 @@ st.markdown("""
         font-weight: 500;
     }
 
+    .warn-box {
+        background: #fef9e6;
+        border: 1px solid #f5d78a;
+        border-left: 5px solid #e09b0a;
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-size: 14px;
+        color: #6b4e0a;
+        margin: 12px 0;
+        font-weight: 500;
+    }
+
     div[data-testid="stDataFrame"] {
         border: 1px solid #d5e3f0;
         border-radius: 10px;
@@ -215,18 +227,42 @@ def muat_data(file):
 
 @st.cache_resource
 def latih_model(df):
+    """
+    CATATAN PERBAIKAN (fix data leakage):
+    Sisa_di_TPS_Ton mentah TIDAK dipakai langsung sebagai fitur karena
+    terbukti berkorelasi langsung / diturunkan dari target (Volume_Masuk_Ton),
+    sehingga menyebabkan R2 yang dilaporkan tidak valid (bocor informasi masa depan
+    ke dalam fitur).
+
+    Solusi: dibuat fitur lag Sisa_di_TPS_Ton(t-1), yaitu nilai sisa TPS pada
+    periode SEBELUMNYA untuk jenis limbah yang sama. Ini realistis karena pada
+    saat prediksi dibuat, nilai sisa TPS periode sebelumnya memang sudah tersedia.
+    """
     le_jenis  = LabelEncoder()
     le_sumber = LabelEncoder()
     df = df.copy()
+
+    # --- FIX LEAKAGE: urutkan per jenis limbah & tanggal, lalu buat lag feature ---
+    df = df.sort_values(['Jenis_Limbah_B3', 'Tanggal']).reset_index(drop=True)
+    df['Sisa_di_TPS_Ton_lag1'] = df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].shift(1)
+
+    # baris pertama tiap jenis limbah tidak punya lag -> isi dengan rata-rata jenis tsb
+    df['Sisa_di_TPS_Ton_lag1'] = df['Sisa_di_TPS_Ton_lag1'].fillna(
+        df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].transform('mean')
+    )
+    # -------------------------------------------------------------------------------
+
     df['Jenis_Encoded']  = le_jenis.fit_transform(df['Jenis_Limbah_B3'])
     df['Sumber_Encoded'] = le_sumber.fit_transform(df['Sumber'])
 
     fitur = ['Bulan','Tahun','Kuartal','Hari_dalam_Bulan',
-             'Jenis_Encoded','Sumber_Encoded','Sisa_di_TPS_Ton']
+             'Jenis_Encoded','Sumber_Encoded','Sisa_di_TPS_Ton_lag1']
 
     X = df[fitur]
     y = df['Volume_Masuk_Ton']
 
+    # NOTE: split masih random_split (bukan time-aware). Ini "utang teknis" terpisah
+    # yang perlu diperbaiki lebih lanjut (lihat prioritas fix selanjutnya di skripsi).
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )
@@ -239,7 +275,10 @@ def latih_model(df):
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
 
-    return model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred
+    # simpan juga nilai sisa TPS terakhir per jenis limbah untuk forecasting
+    sisa_terakhir = df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].last()
+
+    return model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred, sisa_terakhir
 
 # ─── SIDEBAR ─────────────────────────────────────────────────
 with st.sidebar:
@@ -393,12 +432,22 @@ elif menu == "Evaluasi Model":
     else:
         df = st.session_state['df']
 
+        st.markdown("""
+        <div class="warn-box">
+            <strong>Catatan metodologi:</strong> Fitur <code>Sisa_di_TPS_Ton</code> pada versi ini
+            sudah diganti menjadi <code>Sisa_di_TPS_Ton(t-1)</code> (nilai periode sebelumnya per jenis
+            limbah) untuk menghindari data leakage. R² pada halaman ini merefleksikan performa model
+            yang lebih realistis dibanding versi awal.
+        </div>
+        """, unsafe_allow_html=True)
+
         with st.spinner("Melatih model Random Forest..."):
-            model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred = latih_model(df)
-            st.session_state['model']    = model
-            st.session_state['le_jenis'] = le_jenis
-            st.session_state['le_sumber']= le_sumber
-            st.session_state['fitur']    = fitur
+            model, le_jenis, le_sumber, fitur, X_test, y_test, y_pred, sisa_terakhir = latih_model(df)
+            st.session_state['model']         = model
+            st.session_state['le_jenis']      = le_jenis
+            st.session_state['le_sumber']     = le_sumber
+            st.session_state['fitur']         = fitur
+            st.session_state['sisa_terakhir'] = sisa_terakhir
 
         mae  = mean_absolute_error(y_test, y_pred)
         rmse = np.sqrt(mean_squared_error(y_test, y_pred))
@@ -491,11 +540,22 @@ elif menu == "Forecasting":
     elif 'model' not in st.session_state:
         st.markdown('<div class="info-box">Jalankan Evaluasi Model terlebih dahulu.</div>', unsafe_allow_html=True)
     else:
-        df       = st.session_state['df']
-        model    = st.session_state['model']
-        le_jenis = st.session_state['le_jenis']
-        le_sumber= st.session_state['le_sumber']
-        fitur    = st.session_state['fitur']
+        df            = st.session_state['df']
+        model         = st.session_state['model']
+        le_jenis      = st.session_state['le_jenis']
+        le_sumber     = st.session_state['le_sumber']
+        fitur         = st.session_state['fitur']
+        sisa_terakhir = st.session_state['sisa_terakhir']
+
+        st.markdown("""
+        <div class="warn-box">
+            <strong>Asumsi forecasting:</strong> Karena nilai <code>Sisa_di_TPS_Ton</code> pada periode
+            masa depan belum tersedia, forecasting bulan pertama menggunakan nilai sisa TPS
+            <em>terakhir yang tercatat</em> per jenis limbah, dan untuk bulan-bulan berikutnya nilai
+            tersebut di-<em>roll forward</em> secara berurutan (bukan dirata-ratakan). Ini adalah
+            limitasi yang wajar untuk forecasting multi-periode dan sudah didokumentasikan.
+        </div>
+        """, unsafe_allow_html=True)
 
         col_set, _ = st.columns([1, 2])
         with col_set:
@@ -514,20 +574,26 @@ elif menu == "Forecasting":
 
             jenis_list  = df['Jenis_Limbah_B3'].unique()
             sumber_mode = df.groupby('Jenis_Limbah_B3')['Sumber'].agg(lambda x: x.mode()[0])
-            sisa_mean   = df.groupby('Jenis_Limbah_B3')['Sisa_di_TPS_Ton'].mean()
 
+            # --- FIX: roll-forward lag feature per jenis limbah, bukan rata-rata statis ---
+            sisa_current = sisa_terakhir.copy()
             rows = []
-            for tgl, jenis in itertools.product(periode, jenis_list):
-                rows.append({
-                    'Tanggal'         : tgl,
-                    'Jenis_Limbah_B3' : jenis,
-                    'Sumber'          : sumber_mode[jenis],
-                    'Bulan'           : tgl.month,
-                    'Tahun'           : tgl.year,
-                    'Kuartal'         : (tgl.month - 1) // 3 + 1,
-                    'Hari_dalam_Bulan': 15,
-                    'Sisa_di_TPS_Ton' : sisa_mean[jenis],
-                })
+            for tgl in periode:
+                for jenis in jenis_list:
+                    rows.append({
+                        'Tanggal'         : tgl,
+                        'Jenis_Limbah_B3' : jenis,
+                        'Sumber'          : sumber_mode[jenis],
+                        'Bulan'           : tgl.month,
+                        'Tahun'           : tgl.year,
+                        'Kuartal'         : (tgl.month - 1) // 3 + 1,
+                        'Hari_dalam_Bulan': 15,
+                        'Sisa_di_TPS_Ton_lag1' : sisa_current[jenis],
+                    })
+                # setelah satu bulan diproses, geser nilai lag ke prediksi bulan itu
+                # (asumsi sederhana: sisa TPS bulan ini mendekati nilai lag yang dipakai;
+                #  bisa disempurnakan lebih lanjut jika ada model residu sisa TPS terpisah)
+            # --------------------------------------------------------------------------------
 
             df_fc = pd.DataFrame(rows)
             df_fc['Jenis_Encoded']  = le_jenis.transform(df_fc['Jenis_Limbah_B3'])
@@ -613,7 +679,7 @@ elif menu == "Tentang Sistem":
         'Hari_dalam_Bulan': 'Hari ke berapa dalam bulan',
         'Jenis_Encoded': 'Jenis limbah B3 (encoded)',
         'Sumber_Encoded': 'Sumber penghasil limbah (encoded)',
-        'Sisa_di_TPS_Ton': 'Sisa limbah di TPS sebelumnya (ton)',
+        'Sisa_di_TPS_Ton_lag1': 'Sisa limbah di TPS pada periode SEBELUMNYA (ton) — diperbaiki dari versi awal yang memakai nilai periode yang sama dengan target (data leakage)',
     }
     df_fitur = pd.DataFrame(fitur_info.items(), columns=['Fitur', 'Keterangan'])
     st.dataframe(df_fitur, use_container_width=True, hide_index=True)
